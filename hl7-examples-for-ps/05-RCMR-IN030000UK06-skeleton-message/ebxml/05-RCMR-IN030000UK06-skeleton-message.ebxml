@@ -100,7 +100,7 @@ Content-Transfer-Encoding: 8bit
 					</patient>
 				</recordTarget>
 				<author typeCode="AUT">
-					<time nullFlavor="20131102083334" />
+					<time value="20131102083334" />
 					<AgentOrgSDS classCode="AGNT">
 						<agentOrganizationSDS classCode="ORG"
 							determinerCode="INSTANCE">
