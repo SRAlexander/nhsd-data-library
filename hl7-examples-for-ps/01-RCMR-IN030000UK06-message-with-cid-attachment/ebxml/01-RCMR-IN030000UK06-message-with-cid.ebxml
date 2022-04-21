@@ -44,7 +44,7 @@ Content-Transfer-Encoding: 8bit
 			<eb:Description xml:lang="en">
 				Filename="277F29F1-FEAB-4D38-8266-FEB7A1E6227D_LICENSE.txt" 
 				ContentType=text/plain 
-				Compressed=Yes 
+				Compressed=No 
 				LargeAttachment=No 
 				OriginalBase64=Yes
 			</eb:Description>
