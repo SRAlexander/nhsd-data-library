@@ -11,7 +11,49 @@ Content-Type: text/xml; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
 <?xml version="1.0" encoding="UTF-8"?>
-"
+<SOAP:Envelope xmlns:xsi="http://www.w3c.org/2001/XML-Schema-Instance" xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:eb="http://www.oasis-open.org/committees/ebxml-msg/schema/msg-header-2_0.xsd" xmlns:hl7ebxml="urn:hl7-org:transport/ebxml/DSTUv1.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+<SOAP:Header>
+	<eb:MessageHeader SOAP:mustUnderstand="1" eb:version="2.0">
+		<eb:From>
+			<eb:PartyId eb:type="urn:nhs:names:partyType:ocs+serviceInstance">RHM-801710</eb:PartyId>
+		</eb:From>
+		<eb:To>
+			<eb:PartyId eb:type="urn:nhs:names:partyType:ocs+serviceInstance">RHM-803229</eb:PartyId>
+		</eb:To>
+		<eb:CPAId>S2030731A2137919</eb:CPAId>
+		<eb:ConversationId>6E242658-3D8E-11E3-A7DC-172BDA00FA67</eb:ConversationId>
+		<eb:Service>urn:nhs:names:services:gp2gp</eb:Service>
+		<eb:Action>RCMR_IN030000UK06</eb:Action>
+		<eb:MessageData>
+			<eb:MessageId>6E242658-3D8E-11E3-A7DC-172BDA00FA67</eb:MessageId>
+			<eb:Timestamp>2013-10-25T16:59:29Z</eb:Timestamp>
+		</eb:MessageData>
+		<eb:DuplicateElimination/>
+	</eb:MessageHeader>
+	<eb:AckRequested SOAP:mustUnderstand="1" eb:version="2.0" eb:signed="false" SOAP:actor="urn:oasis:names:tc:ebxml-msg:actor:nextMSH"/>
+	
+</SOAP:Header>
+<SOAP:Body>
+	<eb:Manifest SOAP:mustUnderstand="1" eb:version="2.0">
+		<eb:Reference xlink:href="cid:6e242659-3d8e-11e3-a7dc-172bda00fa67@spine.nhs.uk">
+			<eb:Schema eb:location="http://www.nhsia.nhs.uk/schemas/HL7-Message.xsd" eb:version="1.0"/>
+			<eb:Description xml:lang="en">HL7 payload</eb:Description> 
+			<hl7ebxml:Payload style="HL7" encoding="XML" version="3.0"/>
+		</eb:Reference>
+		<eb:Reference eb:id="1C135B3C-5AA5-4BF1-A08B-E6002455B806" xlink:href="cid:435B1171-31F6-4EF2-AD7F-C7E64EEFF357">
+			<eb:Description xml:lang="en">
+			    Id = MID
+				Filename="1C135B3C-5AA5-4BF1-A08B-E6002455B806_text.txt" 
+				ContentType=image/tiff 
+				Compressed=Yes 
+				LargeAttachment=No 
+				OriginalBase64=Yes
+				Length=int
+			</eb:Description>
+		</eb:Reference>
+	</eb:Manifest>
+</SOAP:Body>
+</SOAP:Envelope>
 
 ----=_MIME-Boundary
 Content-Id: <6e242659-3d8e-11e3-a7dc-172bda00fa67@spine.nhs.uk>
@@ -270,18 +312,10 @@ Content-Transfer-Encoding: 8bit
 														<text>application/binary</text>
 														<statusCode code="COMPLETE" />
 														<availabilityTime value="20131025165328" />
-													</NarrativeStatement>
-												</component>												<component typeCode="COMP" contextConductionInd="true">
-													<NarrativeStatement classCode="OBS"
-														moodCode="EVN">
-														<id root="5703D932-5A3F-42FD-BA9E-4C7CDDFF0656" />
-														<text>text/plain</text>
-														<statusCode code="COMPLETE" />
-														<availabilityTime value="20131025165328" />
 														<reference typeCode="REFR">
 															<referredToExternalDocument
 																classCode="DOC" moodCode="EVN">
-																<id root="_277F29F1-FEAB-4D38-8266-FEB7A1E6227D" />
+																<id root="_1C135B3C-5AA5-4BF1-A08B-E6002455B806" />
 																<code code="9b36.00" displayName="Other digital signal"
 																	codeSystem="2.16.840.1.113883.2.1.6.10">
 																	<originalText>Other Attachment</originalText>
@@ -306,11 +340,19 @@ Content-Transfer-Encoding: 8bit
 																	<translation code="37251000000104"
 																		displayName="Other digital signal" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" />
 																</code>
-																<text mediaType="text/plain">
-																	<reference value="file://localhost/277F29F1-FEAB-4D38-8266-FEB7A1E6227D_LICENSE.txt" />
+																<text mediaType="application/binary">
+																	<reference value="file://localhost/1C135B3C-5AA5-4BF1-A08B-E6002455B806_text.txt" />
 																</text>
 															</referredToExternalDocument>
 														</reference>
+													</NarrativeStatement>
+												</component>												<component typeCode="COMP" contextConductionInd="true">
+													<NarrativeStatement classCode="OBS"
+														moodCode="EVN">
+														<id root="5703D932-5A3F-42FD-BA9E-4C7CDDFF0656" />
+														<text>text/plain</text>
+														<statusCode code="COMPLETE" />
+														<availabilityTime value="20131025165328" />
 													</NarrativeStatement>
 												</component>												<component typeCode="COMP" contextConductionInd="true">
 													<NarrativeStatement classCode="OBS"
@@ -362,4 +404,5 @@ Content-Type: text/plain
 Content-Transfer-Encoding: base64
 
 H4sIAAAAAAAA/3WSzW7sIAyF9zyFd7PJS0xX7aaq1JG6ZsAJdAiOwBlu3v4eyGwrRVGCfzjfsW+B\"C9O6V6U7U5WV6RGzJ5mp2YNkV7XUc8y3jZ40MP3KgwupjB8NkWdz6xmXikNBLxfISZ73GiWbD3I2\"X5QWVspChVMvMG+IZq6VVs5T73SQLzE/aD2oIWK+kjTEyMeln7EtGsynZEY4JUr85ESSh4jUCz7l\"Lh6K5xlaPIVYqUnx5p2PCQSHQQaut7UXydDD/1xU9l3+CdITB386qG7gPMnIdo9sPuj8WyUvtFfz\"E4Rmhg4NVqFiZsKt913JDpdAqRPtYRpnh+xkYe3HRI0vT4bh3PUX2ZcwWphr7hajB54sCvsLzVZh\"voBYcSdVlY3UJqi8IJYqQ2uWNiACCjAGsGmExITSF/t7f11hnE1dfHetWXVBpXExX7DecaUHbzpi\"z8gNeDGBNqUzXfo4nMWGdIrGWc0bjJkFQiuXp81ap74C5odTOrmxPzV62HIOyknymGhVi+vMtY/S\"O1jnsVpLkZbMrWFIqCiY3vB624pYF4DzcqcvAD7uvNgxyICyF+SffH9G/gMaqXG6/wIAAA==
+
 ----=_MIME-Boundary--
