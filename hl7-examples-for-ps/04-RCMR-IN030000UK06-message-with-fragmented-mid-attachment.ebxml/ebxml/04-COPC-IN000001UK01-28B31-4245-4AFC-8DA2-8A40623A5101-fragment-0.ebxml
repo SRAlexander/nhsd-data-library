@@ -25,7 +25,7 @@ Content-Transfer-Encoding: 8bit
 		<eb:Service>urn:nhs:names:services:gp2gp</eb:Service>
 		<eb:Action>COPC_IN000001UK01</eb:Action>
 		<eb:MessageData>
-			<eb:MessageId>77128B31-4245-4AFC-8DA2-8A40623A5101</eb:MessageId>
+			<eb:MessageId>28B31-4245-4AFC-8DA2-8A40623A5101</eb:MessageId>
 			<eb:Timestamp>2013-10-28T08:59:26Z</eb:Timestamp>
 		</eb:MessageData>
 		<eb:DuplicateElimination/>
