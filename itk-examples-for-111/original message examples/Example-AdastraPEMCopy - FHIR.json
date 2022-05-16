@@ -1,0 +1,624 @@
+{
+  "resourceType": "Bundle",
+  "identifier": {
+    "type": {
+      "text": "ClinicalDocument VersionNumber"
+    },
+    "value": "1"
+  },
+  "type": "message",
+  "entry": [ {
+    "fullUrl": "urn:uuid:E26C2D6F-746A-40A5-A0F9-1273A4AD2C10",
+    "resource": {
+      "resourceType": "MessageHeader",
+      "id": "E26C2D6F-746A-40A5-A0F9-1273A4AD2C10",
+      "event": {
+        "system": "https://fhir.nhs.uk/STU3/CodeSystem/EventType-1",
+        "code": "discharge-details-1",
+        "display": "Discharge Details"
+      },
+      "destination": [ {
+        "endpoint": "urn:nhs-uk:addressing:ods:M81045:DOSServiceID:138188"
+      } ],
+      "timestamp": "2021-04-06T13:49:22.000+00:00",
+      "source": {
+        "name": "NHS 111 Adaptor",
+        "endpoint": "http://localhost:8080/report"
+      },
+      "reason": {
+        "coding": [ {
+          "system": "urn:nhs-itk:ns:201005:interaction",
+          "code": "urn:nhs-itk:interaction:copyRecipientNHS111CDADocument-v2-0"
+        } ]
+      }
+    }
+  }, {
+    "fullUrl": "urn:uuid:bb6222f0-6745-4f59-99a1-b9a6944afa0e",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "bb6222f0-6745-4f59-99a1-b9a6944afa0e",
+      "identifier": [ {
+        "system": "2.16.840.1.113883.2.1.3.2.4.18.34",
+        "value": "E7174995-6A97-424E-B663-5DAB331EC0C4"
+      }, {
+        "system": "2.16.840.1.113883.2.1.3.2.4.18.35",
+        "value": "59550"
+      }, {
+        "system": "2.16.840.1.113883.2.1.3.2.4.18.49",
+        "value": "E7174995-6A97-424E-B663-5DAB331EC0C4"
+      } ],
+      "status": "finished",
+      "type": [ {
+        "text": "111 Encounter Copy for Information"
+      } ],
+      "subject": {
+        "reference": "urn:uuid:3a093be0-0c05-4285-9afb-0c22d3c71922"
+      },
+      "participant": [ {
+        "type": [ {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/ValueSet/encounter-participant-type",
+            "code": "PPRF",
+            "display": "Author"
+          } ]
+        } ],
+        "individual": {
+          "reference": "urn:uuid:efdfa308-1068-474e-9a47-722f403b96ed"
+        }
+      }, {
+        "type": [ {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/ValueSet/encounter-participant-type",
+            "code": "ATND",
+            "display": "Responsible Party"
+          } ]
+        } ],
+        "individual": {
+          "reference": "urn:uuid:3c0b7aa6-7a52-4ccb-9cae-2a87037197f0"
+        }
+      } ],
+      "period": {
+        "start": "2021-04-06T13:49:22+00:00"
+      },
+      "location": [ {
+        "location": {
+          "reference": "urn:uuid:f8f82f76-0d89-4180-8df2-57bc51d9f106"
+        },
+        "status": "active"
+      }, {
+        "location": {
+          "reference": "urn:uuid:42976829-674a-4984-ae02-3b356db498c3"
+        },
+        "status": "completed"
+      } ],
+      "serviceProvider": {
+        "reference": "urn:uuid:6a7a1d9f-2cb7-4b21-a65f-e4ccb4a74fae"
+      }
+    }
+  }, {
+    "fullUrl": "urn:uuid:6a7a1d9f-2cb7-4b21-a65f-e4ccb4a74fae",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "6a7a1d9f-2cb7-4b21-a65f-e4ccb4a74fae",
+      "active": true,
+      "type": [ {
+        "text": "CST"
+      } ],
+      "name": "SCAS111"
+    }
+  }, {
+    "fullUrl": "urn:uuid:efdfa308-1068-474e-9a47-722f403b96ed",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "efdfa308-1068-474e-9a47-722f403b96ed",
+      "active": true,
+      "name": [ {
+        "use": "official",
+        "family": "McDonald",
+        "given": [ "Denzle" ]
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:3c0b7aa6-7a52-4ccb-9cae-2a87037197f0",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "3c0b7aa6-7a52-4ccb-9cae-2a87037197f0",
+      "active": true,
+      "name": [ {
+        "use": "official",
+        "family": "Black",
+        "given": [ "John" ]
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:f8f82f76-0d89-4180-8df2-57bc51d9f106",
+    "resource": {
+      "resourceType": "Location",
+      "id": "f8f82f76-0d89-4180-8df2-57bc51d9f106",
+      "managingOrganization": {
+        "reference": "urn:uuid:6a9886dd-d323-4011-95d9-bf55c7bb1ebb"
+      }
+    }
+  }, {
+    "fullUrl": "urn:uuid:6a9886dd-d323-4011-95d9-bf55c7bb1ebb",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "6a9886dd-d323-4011-95d9-bf55c7bb1ebb",
+      "identifier": [ {
+        "value": "M81045"
+      } ],
+      "type": [ {
+        "text": "GP Practice"
+      } ],
+      "name": "KNIGHTWICK SURGERY"
+    }
+  }, {
+    "fullUrl": "urn:uuid:42976829-674a-4984-ae02-3b356db498c3",
+    "resource": {
+      "resourceType": "Location",
+      "id": "42976829-674a-4984-ae02-3b356db498c3",
+      "name": "Incident Location",
+      "address": {
+        "type": "physical",
+        "line": [ "4", "Fleet Terrace Boyatt Lane", "Otterbourne", "Winchester", "Hampshire" ],
+        "postalCode": "SO21 2HR"
+      }
+    }
+  }, {
+    "fullUrl": "urn:uuid:3a093be0-0c05-4285-9afb-0c22d3c71922",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "3a093be0-0c05-4285-9afb-0c22d3c71922",
+      "identifier": [ {
+        "extension": [ {
+          "url": "https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1",
+              "code": "01"
+            } ]
+          }
+        } ],
+        "system": "https://fhir.nhs.uk/Id/nhs-number",
+        "value": "9990033277"
+      } ],
+      "active": true,
+      "name": [ {
+        "use": "official",
+        "family": "Xxtestpatient",
+        "given": [ "Ebs-Donotuse" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "tel:02380336991",
+        "use": "home"
+      }, {
+        "system": "phone",
+        "value": "tel:000000000000000"
+      } ],
+      "gender": "female",
+      "birthDate": "1993-04-22",
+      "address": [ {
+        "use": "home",
+        "line": [ "4", "Fleet Terrace Boyatt Lane", "Otterbourne", "Winchester", "Hampshire" ],
+        "postalCode": "SO21 2HR"
+      } ],
+      "generalPractitioner": [ {
+        "reference": "urn:uuid:6b8f8238-901a-432d-a665-2a2ef63ec14c"
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:6b8f8238-901a-432d-a665-2a2ef63ec14c",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "6b8f8238-901a-432d-a665-2a2ef63ec14c",
+      "identifier": [ {
+        "value": "M81045"
+      } ],
+      "type": [ {
+        "text": "GP Practice"
+      } ],
+      "name": "KNIGHTWICK SURGERY"
+    }
+  }, {
+    "fullUrl": "urn:uuid:0d28d6df-a774-4162-83a1-7ee385366640",
+    "resource": {
+      "resourceType": "HealthcareService",
+      "id": "0d28d6df-a774-4162-83a1-7ee385366640",
+      "active": true,
+      "providedBy": {
+        "reference": "urn:uuid:13b98f56-b131-4f54-931b-8ce8d8ac351a"
+      },
+      "location": [ {
+        "reference": "urn:uuid:e60817f1-d68b-4d44-af2f-c88d17a5e463"
+      } ],
+      "name": "KNIGHTWICK SURGERY"
+    }
+  }, {
+    "fullUrl": "urn:uuid:e60817f1-d68b-4d44-af2f-c88d17a5e463",
+    "resource": {
+      "resourceType": "Location",
+      "id": "e60817f1-d68b-4d44-af2f-c88d17a5e463",
+      "managingOrganization": {
+        "reference": "urn:uuid:13b98f56-b131-4f54-931b-8ce8d8ac351a"
+      }
+    }
+  }, {
+    "fullUrl": "urn:uuid:13b98f56-b131-4f54-931b-8ce8d8ac351a",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "13b98f56-b131-4f54-931b-8ce8d8ac351a",
+      "identifier": [ {
+        "value": "M81045"
+      } ],
+      "type": [ {
+        "coding": [ {
+          "code": "PRCP",
+          "display": "KNIGHTWICK SURGERY"
+        } ]
+      } ],
+      "name": "KNIGHTWICK SURGERY"
+    }
+  }, {
+    "fullUrl": "urn:uuid:8a9e4b5f-8045-4a81-ba1c-5bdada517ea5",
+    "resource": {
+      "resourceType": "ReferralRequest",
+      "id": "8a9e4b5f-8045-4a81-ba1c-5bdada517ea5",
+      "status": "active",
+      "intent": "plan",
+      "priority": "routine",
+      "subject": {
+        "reference": "urn:uuid:3a093be0-0c05-4285-9afb-0c22d3c71922"
+      },
+      "context": {
+        "reference": "urn:uuid:bb6222f0-6745-4f59-99a1-b9a6944afa0e"
+      },
+      "occurrencePeriod": {
+        "start": "2021-08-25T03:59:09+00:00",
+        "end": "2021-08-25T04:59:09+00:00"
+      },
+      "authoredOn": "2021-04-06T12:45:42+00:00",
+      "requester": {
+        "agent": {
+          "reference": "urn:uuid:461622d7-d9ed-4af2-a30a-1d3bdf82671b"
+        },
+        "onBehalfOf": {
+          "reference": "urn:uuid:6a7a1d9f-2cb7-4b21-a65f-e4ccb4a74fae"
+        }
+      },
+      "recipient": [ {
+        "reference": "urn:uuid:0d28d6df-a774-4162-83a1-7ee385366640"
+      } ],
+      "reasonReference": [ {
+        "reference": "urn:uuid:34d900d6-e4ce-45e8-8b92-d654b6e79db7"
+      } ],
+      "supportingInfo": [ {
+        "reference": "urn:uuid:8312e880-1053-4a86-a61d-3fc23af5cf86"
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:8312e880-1053-4a86-a61d-3fc23af5cf86",
+    "resource": {
+      "resourceType": "ProcedureRequest",
+      "id": "8312e880-1053-4a86-a61d-3fc23af5cf86",
+      "status": "active",
+      "intent": "plan",
+      "priority": "routine",
+      "doNotPerform": false,
+      "code": {
+        "coding": [ {
+          "system": "2.16.840.1.113883.2.1.3.2.4.17.325",
+          "code": "DisDispoCodeDx10",
+          "display": "DisDispoName - MUST contact a local service for a Non-Urgent Appointment"
+        } ]
+      },
+      "subject": {
+        "reference": "urn:uuid:3a093be0-0c05-4285-9afb-0c22d3c71922"
+      },
+      "occurrencePeriod": {
+        "start": "2021-08-25T03:59:09+00:00",
+        "end": "2021-08-25T04:59:09+00:00"
+      },
+      "reasonReference": [ {
+        "reference": "urn:uuid:34d900d6-e4ce-45e8-8b92-d654b6e79db7"
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:0962393b-1984-4744-a84d-00efb2ed58a8",
+    "resource": {
+      "resourceType": "Composition",
+      "id": "0962393b-1984-4744-a84d-00efb2ed58a8",
+      "identifier": {
+        "use": "usual",
+        "value": "98C875C7-DC4A-4635-B495-64CDE1E8CE83"
+      },
+      "status": "final",
+      "type": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "371531000",
+          "display": "Report of clinical encounter (record artifact)"
+        } ]
+      },
+      "subject": {
+        "reference": "urn:uuid:3a093be0-0c05-4285-9afb-0c22d3c71922"
+      },
+      "encounter": {
+        "reference": "urn:uuid:bb6222f0-6745-4f59-99a1-b9a6944afa0e"
+      },
+      "date": "2021-08-25T03:59:09+00:00",
+      "author": [ {
+        "reference": "urn:uuid:efdfa308-1068-474e-9a47-722f403b96ed"
+      } ],
+      "title": "111 Report",
+      "confidentiality": "N",
+      "section": [ {
+        "section": [ {
+          "title": "Patient's Reported Condition",
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;content xmlns=&quot;urn:hl7-org:v3&quot; xmlns:npfitlc=&quot;NPFIT:HL7:Localisation&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;Pharmacy ITK Testing&lt;/content&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t</div>"
+          }
+        }, {
+          "title": "Case Summary",
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">&lt;xml-fragment xmlns:npfitlc=&quot;NPFIT:HL7:Localisation&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:content styleCode=&quot;bold&quot; xmlns:urn=&quot;urn:hl7-org:v3&quot;&gt;Disposition:&lt;/urn:content&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:content xmlns:urn=&quot;urn:hl7-org:v3&quot;&gt;MUST contact a local service for a Non-Urgent Appointment&lt;/urn:content&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:content xmlns:urn=&quot;urn:hl7-org:v3&quot;&gt;Dx10&lt;/urn:content&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:content styleCode=&quot;bold&quot; xmlns:urn=&quot;urn:hl7-org:v3&quot;&gt;Selected care service:&lt;/urn:content&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:content xmlns:urn=&quot;urn:hl7-org:v3&quot;&gt;CPCS: Day Lewis, Hiltingbury Road, Chandlers Ford, Near Eastleigh&lt;/urn:content&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:content styleCode=&quot;bold&quot; xmlns:urn=&quot;urn:hl7-org:v3&quot;&gt;Rationale:&lt;/urn:content&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:content xmlns:urn=&quot;urn:hl7-org:v3&quot;&gt;Illness&lt;urn:br/&gt;Warm to touch&lt;urn:br/&gt;Rash&lt;urn:br/&gt;Rash, widely scattered or generalised&lt;urn:br/&gt;Flare up of eczema or dermatitis&lt;urn:br/&gt;Itch described as worst feature&lt;urn:br/&gt;Itching in area of rash only&lt;urn:br/&gt;Condition has not improved despite treatment&lt;urn:br/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;/urn:content&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:content styleCode=&quot;bold&quot; xmlns:urn=&quot;urn:hl7-org:v3&quot;&gt;Pathways Assessment:&lt;/urn:content&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:content xmlns:urn=&quot;urn:hl7-org:v3&quot;&gt;An injury or health problem was the reason for the contact.&lt;urn:br/&gt;Heavy bleeding had not occurred in the previous 2 hours.&lt;urn:br/&gt;An illness or health problem was the main problem.&lt;urn:br/&gt;User Comments: Pharmacy ITK Testing &lt;urn:br/&gt;The individual was not fighting for breath.&lt;urn:br/&gt;The main reason for the assessment was not an allergic reaction, heart attack, chest/upper back pain, probable stroke, recent fit/seizure or suicide attempt.&lt;urn:br/&gt;The main reason for contact was not new confusion, declared diabetic hypo/hyperglycaemia, or ICD shock.&lt;urn:br/&gt;The skin on the torso felt normal, warm or hot.&lt;urn:br/&gt;Pathway selected - Skin Problems&lt;urn:br/&gt;The main problem was a rash.&lt;urn:br/&gt;There was no blistering rash.&lt;urn:br/&gt;The rash had appeared more than 4 hours previously.&lt;urn:br/&gt;The individual was able to carry out most or all normal activities.&lt;urn:br/&gt;The skin problem did not relate to an assault.&lt;urn:br/&gt;There was no rash like blood spots or bruises under the skin.&lt;urn:br/&gt;There was no new or worsening confusion.&lt;urn:br/&gt;Breathing harder or faster when doing nothing was not described.&lt;urn:br/&gt;There was no known increased susceptibilty to infection.&lt;urn:br/&gt;Lots of blisters or ulcers inside the mouth were not described.&lt;urn:br/&gt;Skin was not peeling off in sections.&lt;urn:br/&gt;There was no large area of redness like burnt or scalded skin.&lt;urn:br/&gt;The rash was generalised or affected more than one area of skin.&lt;urn:br/&gt;There was no fever at the time of assessment or within the previous 12 hours.&lt;urn:br/&gt;The problem did not begin after starting new medication.&lt;urn:br/&gt;There was no possibility of pregnancy.&lt;urn:br/&gt;There was no known contact with measles or rubella in the previous 3 weeks.&lt;urn:br/&gt;The individual was not jaundiced.&lt;urn:br/&gt;There were no spots or patches with honey-coloured crusting.&lt;urn:br/&gt;There was no known contact with glandular fever in the previous 2 months.&lt;urn:br/&gt;There was no unexplained weight loss, loss of appetite or constant tiredness over the previous 4 weeks.&lt;urn:br/&gt;The individual had no previous diagnosis of cancer.&lt;urn:br/&gt;The individual had not experienced generalised itching for more than 2 weeks.&lt;urn:br/&gt;The problem involved an exacerbation of previously diagnosed eczema or dermatitis&lt;urn:br/&gt;Itch was the worst feature.&lt;urn:br/&gt;There was localised itching.&lt;urn:br/&gt;There had been no previous assessment by a doctor this episode.&lt;urn:br/&gt;There was a lack of improvement despite appropriate homecare measures.&lt;urn:br/&gt;Instructions given were: The individual needs to contact a local service for a non-urgent appointment.&lt;urn:br/&gt;Directory of Services referral: Pharmacy - Day Lewis, Hiltingbury Road, Chandlers Ford, Near Eastleigh&lt;urn:br/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;/urn:content&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:content styleCode=&quot;bold&quot; xmlns:urn=&quot;urn:hl7-org:v3&quot;&gt;Advice given:&lt;/urn:content&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:content xmlns:urn=&quot;urn:hl7-org:v3&quot;&gt;I will arrange for a clinician to contact the individual. I need to ask some further questions in order to determine the best way to do this.&lt;urn:br/&gt;If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call us back.&lt;urn:br/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;/urn:content&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t&lt;/xml-fragment&gt;</div>"
+          }
+        }, {
+          "title": "Adastra Assessment",
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">&lt;xml-fragment xmlns:npfitlc=&quot;NPFIT:HL7:Localisation&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;/&gt;</div>"
+          }
+        } ]
+      }, {
+        "title": "ReferralRequest",
+        "entry": [ {
+          "reference": "urn:uuid:8a9e4b5f-8045-4a81-ba1c-5bdada517ea5"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:c4029025-1ce1-4360-81d7-8581bfbfaf77",
+    "resource": {
+      "resourceType": "Consent",
+      "id": "c4029025-1ce1-4360-81d7-8581bfbfaf77",
+      "identifier": {
+        "use": "usual",
+        "value": "98C875C7-DC4A-4635-B495-64CDE1E8CE83"
+      },
+      "status": "active",
+      "patient": {
+        "reference": "urn:uuid:3a093be0-0c05-4285-9afb-0c22d3c71922"
+      },
+      "period": {
+        "start": "2021-04-06T13:49:22+00:00"
+      },
+      "consentingParty": [ {
+        "reference": "urn:uuid:3a093be0-0c05-4285-9afb-0c22d3c71922"
+      } ],
+      "action": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "425691002",
+          "display": "Consent given for electronic record sharing"
+        } ],
+        "text": "Consent given for electronic record sharing"
+      } ],
+      "organization": [ {
+        "reference": "urn:uuid:6a7a1d9f-2cb7-4b21-a65f-e4ccb4a74fae"
+      } ],
+      "policyRule": "http://hl7.org/fhir/ConsentPolicy/opt-out",
+      "data": [ {
+        "meaning": "related",
+        "reference": {
+          "reference": "urn:uuid:bb6222f0-6745-4f59-99a1-b9a6944afa0e"
+        }
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:34d900d6-e4ce-45e8-8b92-d654b6e79db7",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "34d900d6-e4ce-45e8-8b92-d654b6e79db7",
+      "clinicalStatus": "active",
+      "verificationStatus": "unknown",
+      "subject": {
+        "reference": "urn:uuid:3a093be0-0c05-4285-9afb-0c22d3c71922"
+      },
+      "context": {
+        "reference": "urn:uuid:bb6222f0-6745-4f59-99a1-b9a6944afa0e"
+      }
+    }
+  }, {
+    "fullUrl": "urn:uuid:2b96ee7a-38af-4eb1-8b4f-ddede6daa600",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "2b96ee7a-38af-4eb1-8b4f-ddede6daa600",
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "33962009",
+          "display": "Presenting complaint"
+        } ]
+      },
+      "subject": {
+        "reference": "urn:uuid:3a093be0-0c05-4285-9afb-0c22d3c71922"
+      },
+      "context": {
+        "reference": "urn:uuid:bb6222f0-6745-4f59-99a1-b9a6944afa0e"
+      },
+      "valueString": "Pharmacy ITK Testing"
+    }
+  }, {
+    "fullUrl": "urn:uuid:3dfcbe62-1192-4028-96ab-61c2ed77f623",
+    "resource": {
+      "resourceType": "PractitionerRole",
+      "id": "3dfcbe62-1192-4028-96ab-61c2ed77f623",
+      "practitioner": {
+        "reference": "urn:uuid:efdfa308-1068-474e-9a47-722f403b96ed"
+      },
+      "organization": {
+        "reference": "urn:uuid:06f1843e-9664-4b7f-ae45-76668e0d12cc"
+      },
+      "code": [ {
+        "coding": [ {
+          "system": "2.16.840.1.113883.2.1.3.2.4.17.339",
+          "code": "DOCTOR",
+          "display": "Doctor"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:06f1843e-9664-4b7f-ae45-76668e0d12cc",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "06f1843e-9664-4b7f-ae45-76668e0d12cc",
+      "identifier": [ {
+        "value": "RYE"
+      } ],
+      "name": "1.SCAS Administrator (SCAS111)"
+    }
+  }, {
+    "fullUrl": "urn:uuid:916be136-b311-4b78-aca9-14d463a12d04",
+    "resource": {
+      "resourceType": "PractitionerRole",
+      "id": "916be136-b311-4b78-aca9-14d463a12d04",
+      "practitioner": {
+        "reference": "urn:uuid:3c0b7aa6-7a52-4ccb-9cae-2a87037197f0"
+      },
+      "organization": {
+        "reference": "urn:uuid:741c31bf-5451-4c1c-be12-e7ede5692dd4"
+      },
+      "code": [ {
+        "coding": [ {
+          "system": "2.16.840.1.113883.2.1.3.2.4.17.196",
+          "code": "R0010",
+          "display": "Medical Director"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:741c31bf-5451-4c1c-be12-e7ede5692dd4",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "741c31bf-5451-4c1c-be12-e7ede5692dd4",
+      "identifier": [ {
+        "value": "RYE"
+      } ],
+      "name": "SCAS111"
+    }
+  }, {
+    "fullUrl": "urn:uuid:01fb838f-1ec8-470a-aba1-7f9f1e60a4f2",
+    "resource": {
+      "resourceType": "RelatedPerson",
+      "id": "01fb838f-1ec8-470a-aba1-7f9f1e60a4f2",
+      "patient": {
+        "reference": "urn:uuid:3a093be0-0c05-4285-9afb-0c22d3c71922"
+      },
+      "relationship": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/v2/0131",
+          "code": "C",
+          "display": "Emergency Contact"
+        } ]
+      },
+      "telecom": [ {
+        "system": "phone",
+        "value": "tel:000000000000000"
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:461622d7-d9ed-4af2-a30a-1d3bdf82671b",
+    "resource": {
+      "resourceType": "Device",
+      "id": "461622d7-d9ed-4af2-a30a-1d3bdf82671b",
+      "model": "111 Adaptor",
+      "version": "0.9.0"
+    }
+  }, {
+    "fullUrl": "urn:uuid:2b5f253c-9c04-482b-9cc4-7303c8d58856",
+    "resource": {
+      "resourceType": "List",
+      "id": "2b5f253c-9c04-482b-9cc4-7303c8d58856",
+      "status": "current",
+      "mode": "working",
+      "title": "111 Report List",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "225390008",
+          "display": "Triage"
+        } ]
+      },
+      "subject": {
+        "reference": "urn:uuid:3a093be0-0c05-4285-9afb-0c22d3c71922"
+      },
+      "encounter": {
+        "reference": "urn:uuid:bb6222f0-6745-4f59-99a1-b9a6944afa0e"
+      },
+      "date": "2021-08-25T03:59:09+00:00",
+      "source": {
+        "reference": "urn:uuid:461622d7-d9ed-4af2-a30a-1d3bdf82671b"
+      },
+      "orderedBy": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/list-order",
+          "code": "event-date",
+          "display": "Sorted by Event Date"
+        } ]
+      },
+      "entry": [ {
+        "item": {
+          "reference": "urn:uuid:6a9886dd-d323-4011-95d9-bf55c7bb1ebb"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:2b96ee7a-38af-4eb1-8b4f-ddede6daa600"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:3c0b7aa6-7a52-4ccb-9cae-2a87037197f0"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:efdfa308-1068-474e-9a47-722f403b96ed"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:01fb838f-1ec8-470a-aba1-7f9f1e60a4f2"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:34d900d6-e4ce-45e8-8b92-d654b6e79db7"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:06f1843e-9664-4b7f-ae45-76668e0d12cc"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:6a7a1d9f-2cb7-4b21-a65f-e4ccb4a74fae"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:741c31bf-5451-4c1c-be12-e7ede5692dd4"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:13b98f56-b131-4f54-931b-8ce8d8ac351a"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:6b8f8238-901a-432d-a665-2a2ef63ec14c"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:8a9e4b5f-8045-4a81-ba1c-5bdada517ea5"
+        }
+      } ]
+    }
+  } ]
+}

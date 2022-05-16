@@ -1,0 +1,302 @@
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+	<s:Header>
+		<a:Action s:mustUnderstand="1">urn:nhs-itk:services:201005:SendNHS111Report-v2-0</a:Action>
+		<a:MessageID>E26C2D6F-746A-40A5-A0F9-1273A4AD2C10</a:MessageID>
+		<a:ReplyTo>
+			<a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+		</a:ReplyTo>
+            <a:To s:mustUnderstand="1">http://localhost:8080/report</a:To>
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+            <wsu:Timestamp
+                    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                    wsu:Id="D6CD5232-14CF-11DF-9423-1F9A910D4703">
+                <wsu:Created>2020-09-03T12:07:58Z</wsu:Created>
+                <wsu:Expires>2020-09-03T12:17:58Z</wsu:Expires>
+            </wsu:Timestamp>
+            <wsse:UsernameToken>
+                <wsse:Username>TKS Server test</wsse:Username>
+            </wsse:UsernameToken>
+        </wsse:Security>
+	</s:Header>
+	<s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<DistributionEnvelope xmlns="urn:nhs-itk:ns:201005">
+			<header trackingid="F2527AF5-3F29-4FD5-A32B-51207B689874" service="urn:nhs-itk:services:201005:SendNHS111Report-v2-0">
+				<addresslist>
+					<address uri="urn:nhs-uk:addressing:ods:M81045" />
+					<address type="2.16.840.1.113883.2.1.3.2.4.18.44" uri="138188" />
+				</addresslist>
+				<auditIdentity>
+					<id uri="urn:nhs-uk:identity:ods:RYE" />
+				</auditIdentity>
+				<manifest count="1">
+					<manifestitem id="uuid_C08E4B0E-E269-4C83-8A11-F2FFCDEBD419" mimetype="text/xml" profileid="urn:nhs-en:profile:nhs111CDADocument-v2-0" />
+				</manifest>
+				<senderAddress uri="urn:nhs-uk:addressing:ods:RYE" />
+				<handlingSpecification>
+					<spec key="urn:nhs-itk:ns:201005:interaction" value="urn:nhs-itk:interaction:copyRecipientNHS111CDADocument-v2-0" />
+				</handlingSpecification>
+			</header>
+			<payloads count="1">
+				<payload id="uuid_C08E4B0E-E269-4C83-8A11-F2FFCDEBD419">
+					<ClinicalDocument classCode="DOCCLIN" moodCode="EVN" xmlns="urn:hl7-org:v3" xmlns:npfitlc="NPFIT:HL7:Localisation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+						<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+						<npfitlc:messageType root="2.16.840.1.113883.2.1.3.2.4.18.17" extension="POCD_MT200001GB02" />
+						<id root="C08E4B0E-E269-4C83-8A11-F2FFCDEBD419" />
+						<code code="819551000000100" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" />
+						<title>NHS 111 Report</title>
+						<effectiveTime value="20210406144922+01" />
+						<confidentialityCode code="N" displayName="normal" codeSystem="2.16.840.1.113883.1.11.16926" />
+						<setId root="98C875C7-DC4A-4635-B495-64CDE1E8CE83" />
+						<versionNumber value="1" />
+						<recordTarget typeCode="RCT" contextControlCode="OP">
+							<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145201GB01#PatientRole" />
+							<patientRole classCode="PAT">
+								<templateId extension="COCD_TP145201GB01#PatientRole" root="2.16.840.1.113883.2.1.3.2.4.18.2" />
+								<id extension="9990033277" root="2.16.840.1.113883.2.1.4.1" />
+								<id extension="1B81ACF1-544E-4336-B072-C31C54EA6D40" root="2.16.840.1.113883.2.1.3.2.4.18.24" assigningAuthorityName="RYE:SCAS111" />
+								<addr use="H">
+									<streetAddressLine>4</streetAddressLine>
+									<streetAddressLine>Fleet Terrace Boyatt Lane</streetAddressLine>
+									<streetAddressLine>Otterbourne</streetAddressLine>
+									<streetAddressLine>Winchester</streetAddressLine>
+									<streetAddressLine>Hampshire</streetAddressLine>
+									<postalCode>SO21 2HR</postalCode>
+								</addr>
+								<telecom value="tel:02380336991" use="H" />
+								<telecom value="tel:000000000000000" use="EC" />
+								<patient classCode="PSN" determinerCode="INSTANCE">
+									<templateId extension="COCD_TP145201GB01#patientPatient" root="2.16.840.1.113883.2.1.3.2.4.18.2" />
+									<name>
+										<given>Ebs-Donotuse</given>
+										<family>Xxtestpatient</family>
+									</name>
+									<administrativeGenderCode codeSystem="2.16.840.1.113883.2.1.3.2.4.16.25" displayName="Female" code="2" />
+									<birthTime value="19930422" />
+								</patient>
+								<providerOrganization classCode="ORG" determinerCode="INSTANCE">
+									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145201GB01#providerOrganization" />
+									<id extension="M81045" root="2.16.840.1.113883.2.1.3.2.4.19.1" />
+									<name>KNIGHTWICK SURGERY</name>
+									<standardIndustryClassCode code="001" displayName="GP Practice" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.289" />
+								</providerOrganization>
+							</patientRole>
+						</recordTarget>
+						<author typeCode="AUT" contextControlCode="OP">
+							<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145200GB01#AssignedAuthor" />
+							<functionCode code="OA" displayName="Originating Author" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.178" />
+							<time value="20210406134542+01" />
+							<assignedAuthor classCode="ASSIGNED">
+								<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145200GB01#AssignedAuthor" />
+								<id extension="MCDONALDD" root="2.16.840.1.113883.2.1.3.2.4.18.24" />
+								<code codeSystem="2.16.840.1.113883.2.1.3.2.4.17.339" code="DOCTOR" displayName="Doctor" />
+								<assignedPerson classCode="PSN" determinerCode="INSTANCE">
+									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145200GB01#assignedPerson" />
+									<name>
+										<given>Denzle</given>
+										<family>McDonald</family>
+									</name>
+								</assignedPerson>
+								<representedOrganization classCode="ORG" determinerCode="INSTANCE">
+									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145200GB01#representedOrganization" />
+									<id extension="RYE" root="2.16.840.1.113883.2.1.3.2.4.19.1" />
+									<name>1.SCAS Administrator (SCAS111)</name>
+								</representedOrganization>
+							</assignedAuthor>
+						</author>
+						<custodian typeCode="CST">
+							<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145018UK03#AssignedCustodian" />
+							<assignedCustodian classCode="ASSIGNED">
+								<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145018UK03#AssignedCustodian" />
+								<representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
+									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145018UK03#representedCustodianOrganization" />
+									<id extension="RYE" root="2.16.840.1.113883.2.1.3.2.4.19.2" />
+									<name>SCAS111</name>
+								</representedCustodianOrganization>
+							</assignedCustodian>
+						</custodian>
+						<informationRecipient typeCode="PRCP">
+							<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145203GB03#IntendedRecipient" />
+							<intendedRecipient classCode="ASSIGNED">
+								<templateId extension="COCD_TP145203GB03#IntendedRecipient" root="2.16.840.1.113883.2.1.3.2.4.18.2" />
+								<receivedOrganization classCode="ORG" determinerCode="INSTANCE">
+									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145203GB03#representedOrganization" />
+									<id extension="M81045" root="2.16.840.1.113883.2.1.3.2.4.19.2" />
+									<name>KNIGHTWICK SURGERY</name>
+								</receivedOrganization>
+							</intendedRecipient>
+						</informationRecipient>
+						<authorization typeCode="AUTH">
+							<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146226GB02#Consent" />
+							<consent classCode="CONS" moodCode="EVN">
+								<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146226GB02#Consent" />
+								<id root="C64FC2E2-C12F-45EB-B49E-6A100BA14567" />
+								<code code="425691002" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Consent given for electronic record sharing" />
+								<statusCode code="completed" />
+							</consent>
+						</authorization>
+						<componentOf typeCode="COMP">
+							<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146232GB01#EncompassingEncounter" />
+							<encompassingEncounter classCode="ENC" moodCode="EVN">
+								<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146232GB01#EncompassingEncounter" />
+								<id extension="E7174995-6A97-424E-B663-5DAB331EC0C4" root="2.16.840.1.113883.2.1.3.2.4.18.34" />
+								<id extension="59550" root="2.16.840.1.113883.2.1.3.2.4.18.35" />
+								<id extension="E7174995-6A97-424E-B663-5DAB331EC0C4" root="2.16.840.1.113883.2.1.3.2.4.18.49" />
+								<code code="NHS111Encounter" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.326" displayName="NHS111 Encounter" />
+								<effectiveTime>
+									<low value="20210406132321+01" />
+									<high value="20210406134542+01" />
+								</effectiveTime>
+								<dischargeDispositionCode codeSystem="2.16.840.1.113883.2.1.3.2.4.17.325" code="DisDispoCodeDx10" displayName="DisDispoName - MUST contact a local service for a Non-Urgent Appointment" />
+								<responsibleParty typeCode="RESP">
+									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146232GB01#responsibleParty" />
+									<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145210GB01#AssignedEntity" />
+									<assignedEntity classCode="ASSIGNED">
+										<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145210GB01#AssignedEntity" />
+										<id nullFlavor="NI" />
+										<code code="R0010" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.196" displayName="Medical Director" />
+										<assignedPerson classCode="PSN" determinerCode="INSTANCE">
+											<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145210GB01#assignedPerson" />
+											<name>
+												<given>John</given>
+												<family>Black</family>
+											</name>
+										</assignedPerson>
+										<representedOrganization classCode="ORG" determinerCode="INSTANCE">
+											<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145210GB01#representedOrganization" />
+											<id extension="RYE" root="2.16.840.1.113883.2.1.3.2.4.19.1" />
+											<name>SCAS111</name>
+										</representedOrganization>
+									</assignedEntity>
+								</responsibleParty>
+								<location typeCode="LOC">
+									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146232GB01#location" />
+									<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145222GB02#HealthCareFacility" />
+									<healthCareFacility classCode="ISDLOC">
+										<templateId extension="COCD_TP145222GB02#HealthCareFacility" root="2.16.840.1.113883.2.1.3.2.4.18.2" />
+										<id nullFlavor="NA" />
+										<location classCode="PLC" determinerCode="INSTANCE">
+											<templateId extension="COCD_TP145222GB02#location" root="2.16.840.1.113883.2.1.3.2.4.18.2" />
+											<name>Incident Location</name>
+											<addr use="PHYS">
+												<streetAddressLine>4</streetAddressLine>
+												<streetAddressLine>Fleet Terrace Boyatt Lane</streetAddressLine>
+												<streetAddressLine>Otterbourne</streetAddressLine>
+												<streetAddressLine>Winchester</streetAddressLine>
+												<streetAddressLine>Hampshire</streetAddressLine>
+												<postalCode>SO21 2HR</postalCode>
+											</addr>
+										</location>
+									</healthCareFacility>
+								</location>
+							</encompassingEncounter>
+						</componentOf>
+						<component typeCode="COMP" contextConductionInd="true">
+							<structuredBody classCode="DOCBODY" moodCode="EVN">
+								<component typeCode="COMP" contextConductionInd="true">
+									<section classCode="DOCSECT" moodCode="EVN">
+										<id root="49FF421B-1A0F-44CE-A0B3-CC2025351F8E" />
+										<component typeCode="COMP" contextConductionInd="true">
+											<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146246GB01#Section1" />
+											<section classCode="DOCSECT" moodCode="EVN">
+												<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
+												<id root="8B51030B-FE16-4DC3-BE0F-A2F6BBA40C7E" />
+												<title>Patient's Reported Condition</title>
+												<text>
+													<content>Pharmacy ITK Testing</content>
+												</text>
+											</section>
+										</component>
+										<component typeCode="COMP" contextConductionInd="true">
+											<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146246GB01#Section1" />
+											<section classCode="DOCSECT" moodCode="EVN">
+												<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
+												<id root="4D786B5B-64B9-44BC-A5EC-3A552BFDB67E" />
+												<title>Case Summary</title>
+												<text>
+													<content styleCode="bold">Disposition:</content>
+													<br />
+													<content>MUST contact a local service for a Non-Urgent Appointment</content>
+													<br />
+													<content>Dx10</content>
+													<br />
+													<br />
+													<content styleCode="bold">Selected care service:</content>
+													<br />
+													<content>CPCS: Day Lewis, Hiltingbury Road, Chandlers Ford, Near Eastleigh</content>
+													<br />
+													<br />
+													<content styleCode="bold">Rationale:</content>
+													<br />
+													<content>Illness<br />Warm to touch<br />Rash<br />Rash, widely scattered or generalised<br />Flare up of eczema or dermatitis<br />Itch described as worst feature<br />Itching in area of rash only<br />Condition has not improved despite treatment<br />
+													</content>
+													<br />
+													<br />
+													<content styleCode="bold">Pathways Assessment:</content>
+													<br />
+													<content>An injury or health problem was the reason for the contact.<br />Heavy bleeding had not occurred in the previous 2 hours.<br />An illness or health problem was the main problem.<br />User Comments: Pharmacy ITK Testing <br />The individual was not fighting for breath.<br />The main reason for the assessment was not an allergic reaction, heart attack, chest/upper back pain, probable stroke, recent fit/seizure or suicide attempt.<br />The main reason for contact was not new confusion, declared diabetic hypo/hyperglycaemia, or ICD shock.<br />The skin on the torso felt normal, warm or hot.<br />Pathway selected - Skin Problems<br />The main problem was a rash.<br />There was no blistering rash.<br />The rash had appeared more than 4 hours previously.<br />The individual was able to carry out most or all normal activities.<br />The skin problem did not relate to an assault.<br />There was no rash like blood spots or bruises under the skin.<br />There was no new or worsening confusion.<br />Breathing harder or faster when doing nothing was not described.<br />There was no known increased susceptibilty to infection.<br />Lots of blisters or ulcers inside the mouth were not described.<br />Skin was not peeling off in sections.<br />There was no large area of redness like burnt or scalded skin.<br />The rash was generalised or affected more than one area of skin.<br />There was no fever at the time of assessment or within the previous 12 hours.<br />The problem did not begin after starting new medication.<br />There was no possibility of pregnancy.<br />There was no known contact with measles or rubella in the previous 3 weeks.<br />The individual was not jaundiced.<br />There were no spots or patches with honey-coloured crusting.<br />There was no known contact with glandular fever in the previous 2 months.<br />There was no unexplained weight loss, loss of appetite or constant tiredness over the previous 4 weeks.<br />The individual had no previous diagnosis of cancer.<br />The individual had not experienced generalised itching for more than 2 weeks.<br />The problem involved an exacerbation of previously diagnosed eczema or dermatitis<br />Itch was the worst feature.<br />There was localised itching.<br />There had been no previous assessment by a doctor this episode.<br />There was a lack of improvement despite appropriate homecare measures.<br />Instructions given were: The individual needs to contact a local service for a non-urgent appointment.<br />Directory of Services referral: Pharmacy - Day Lewis, Hiltingbury Road, Chandlers Ford, Near Eastleigh<br />
+													</content>
+													<br />
+													<content styleCode="bold">Advice given:</content>
+													<br />
+													<content>I will arrange for a clinician to contact the individual. I need to ask some further questions in order to determine the best way to do this.<br />If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call us back.<br />
+													</content>
+												</text>
+											</section>
+										</component>
+										<component typeCode="COMP" contextConductionInd="true">
+											<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146246GB01#Section1" />
+											<section classCode="DOCSECT" moodCode="EVN">
+												<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
+												<id root="53595498-1E1D-48BB-B989-B550F911EA06" />
+												<title>Adastra Assessment</title>
+												<text />
+											</section>
+										</component>
+									</section>
+								</component>
+								<component typeCode="COMP" contextConductionInd="true">
+									<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146246GB01#Section1" />
+									<section classCode="DOCSECT" moodCode="EVN">
+										<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
+										<id root="B886D30E-B417-409F-9177-DD8BBAB6591F" />
+										<code code="886891000000102" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Patient Reported Condition" />
+										<title>Patient's Reported Condition</title>
+										<text>
+											<content>Pharmacy ITK Testing</content>
+											<br />
+										</text>
+									</section>
+								</component>
+								<component typeCode="COMP" contextConductionInd="true">
+									<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146246GB01#Section1" />
+									<section classCode="DOCSECT" moodCode="EVN">
+										<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
+										<id root="436C4806-3B15-4D90-AE59-565B3306CE1F" />
+										<code code="1052951000000105" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Information And Advice Given" />
+										<title>Information And Advice Given</title>
+										<text />
+									</section>
+								</component>
+								<component typeCode="COMP" contextConductionInd="true">
+									<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146246GB01#Section1" />
+									<section classCode="DOCSECT" moodCode="EVN">
+										<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
+										<id root="611D9B3B-8E74-43C7-A51C-9BD90E05397E" />
+										<code code="913341000000104" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Disposition details" />
+										<title>Disposition</title>
+										<text>
+											<content>MUST contact a local service for a Non-Urgent Appointment<br />
+											</content>
+											<br />
+											<br />
+										</text>
+									</section>
+								</component>
+							</structuredBody>
+						</component>
+					</ClinicalDocument>
+				</payload>
+			</payloads>
+		</DistributionEnvelope>
+	</s:Body>
+</s:Envelope>

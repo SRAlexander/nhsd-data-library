@@ -1,0 +1,327 @@
+﻿<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+	<s:Header>
+		<a:Action s:mustUnderstand="1">urn:nhs-itk:services:201005:SendNHS111Report-v2-0</a:Action>
+		<a:MessageID>7AEFFED7-78AF-4940-9EE2-5FAA3920ECFE</a:MessageID>
+		<a:ReplyTo>
+			<a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+		</a:ReplyTo>
+            <a:To s:mustUnderstand="1">http://localhost:8080/report</a:To>
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+            <wsu:Timestamp
+                    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                    wsu:Id="D6CD5232-14CF-11DF-9423-1F9A910D4703">
+                <wsu:Created>2020-09-03T12:07:58Z</wsu:Created>
+                <wsu:Expires>2020-09-03T12:17:58Z</wsu:Expires>
+            </wsu:Timestamp>
+            <wsse:UsernameToken>
+                <wsse:Username>TKS Server test</wsse:Username>
+            </wsse:UsernameToken>
+        </wsse:Security>
+	</s:Header>
+	<s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<DistributionEnvelope xmlns="urn:nhs-itk:ns:201005">
+			<header trackingid="5ABE57EC-7BB0-465B-89BE-62D90962D31C" service="urn:nhs-itk:services:201005:SendNHS111Report-v2-0">
+				<addresslist>
+					<address uri="urn:nhs-uk:addressing:ods:RSHSO14A" />
+					<address type="2.16.840.1.113883.2.1.3.2.4.18.44" uri="2000006423" />
+				</addresslist>
+				<auditIdentity>
+					<id uri="urn:nhs-uk:identity:ods:RYE" />
+				</auditIdentity>
+				<manifest count="1">
+					<manifestitem id="uuid_B10AB820-36AF-4A9D-A42F-E35FAD4D04F9" mimetype="text/xml" profileid="urn:nhs-en:profile:nhs111CDADocument-v2-0" />
+				</manifest>
+				<senderAddress uri="urn:nhs-uk:addressing:ods:RYE" />
+				<handlingSpecification>
+					<spec key="urn:nhs-itk:ns:201005:interaction" value="urn:nhs-itk:interaction:primaryEmergencyDepartmentRecipientNHS111CDADocument-v2-0" />
+				</handlingSpecification>
+			</header>
+			<payloads count="1">
+				<payload id="uuid_B10AB820-36AF-4A9D-A42F-E35FAD4D04F9">
+					<ClinicalDocument classCode="DOCCLIN" moodCode="EVN" xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+						<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+						<npfitlc:messageType root="2.16.840.1.113883.2.1.3.2.4.18.17" extension="POCD_MT200001GB02" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+						<id root="688C220F-8E30-4977-9879-591D155C42C4" />
+						<code code="819551000000100" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" />
+						<title>NHS 111 Report Title</title>
+						<effectiveTime value="20210406123335+01" />
+						<confidentialityCode code="N" displayName="normal" codeSystem="2.16.840.1.113883.1.11.16926" />
+						<setId root="A8E3FB32-6805-4191-B071-EA540A9318CD" />
+						<versionNumber value="1" />
+						<recordTarget typeCode="RCT" contextControlCode="OP">
+							<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145201GB01#PatientRole" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+							<patientRole classCode="PAT">
+								<templateId extension="COCD_TP145201GB01#PatientRole" root="2.16.840.1.113883.2.1.3.2.4.18.2" />
+								<id extension="9990004951" root="2.16.840.1.113883.2.1.4.1" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+								<id extension="4AEDBB77-3679-4016-BF35-D60D67975D38" root="2.16.840.1.113883.2.1.3.2.4.18.24" assigningAuthorityName="RYE:SCAS111" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+								<addr use="H" xmlns:npfitlc="NPFIT:HL7:Localisation">
+									<streetAddressLine>Home Address Line 1</streetAddressLine>
+									<streetAddressLine>Home Address Line 2</streetAddressLine>
+									<streetAddressLine>Home Address Line 3</streetAddressLine>
+									<streetAddressLine>Home Address Line 4</streetAddressLine>
+									<streetAddressLine>Home Address Line 5</streetAddressLine>
+									<postalCode>HA25 4NS</postalCode>
+								</addr>
+								<telecom value="tel:07948625625" use="H" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+								<telecom value="tel:07948625625" use="EC" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+								<patient classCode="PSN" determinerCode="INSTANCE">
+									<templateId extension="COCD_TP145201GB01#patientPatient" root="2.16.840.1.113883.2.1.3.2.4.18.2" />
+									<name>
+										<given>Patient Given Name</given>
+										<family>Patient Family Name</family>
+									</name>
+									<administrativeGenderCode codeSystem="2.16.840.1.113883.2.1.3.2.4.16.25" displayName="Female" code="2" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+									<birthTime value="20150401" />
+								</patient>
+								<providerOrganization classCode="ORG" determinerCode="INSTANCE">
+									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145201GB01#providerOrganization" />
+									<id extension="J82633" root="2.16.840.1.113883.2.1.3.2.4.19.1" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+									<name>ProviderOrginization Name</name>
+									<telecom value="tel:01730892412" use="WP" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+									<addr use="WP" xmlns:npfitlc="NPFIT:HL7:Localisation">
+										<streetAddressLine>Provider Address Line 1</streetAddressLine>
+										<streetAddressLine>Provider Address Line 2</streetAddressLine>
+										<streetAddressLine>Provider Address Line 3</streetAddressLine>
+										<streetAddressLine>Provider Address Line 4</streetAddressLine>
+										<postalCode>WP25 4NS</postalCode>
+									</addr>
+									<standardIndustryClassCode code="001" displayName="GP Practice" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.289" />
+								</providerOrganization>
+							</patientRole>
+						</recordTarget>
+						<author typeCode="AUT" contextControlCode="OP" xmlns:npfitlc="NPFIT:HL7:Localisation">
+							<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145200GB01#AssignedAuthor" />
+							<functionCode code="OA" displayName="Originating Author" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.178" />
+							<time value="20210406123327+01" />
+							<assignedAuthor classCode="ASSIGNED">
+								<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145200GB01#AssignedAuthor" />
+								<id extension="MCDONALDD" root="2.16.840.1.113883.2.1.3.2.4.18.24" />
+								<code codeSystem="2.16.840.1.113883.2.1.3.2.4.17.339" code="DOCTOR" displayName="Doctor" />
+								<assignedPerson classCode="PSN" determinerCode="INSTANCE">
+									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145200GB01#assignedPerson" />
+									<name>
+										<given>AuthorAssignedPerson GivenName</given>
+										<family>AuthorAssignedPerson FamilyName</family>
+									</name>
+								</assignedPerson>
+								<representedOrganization classCode="ORG" determinerCode="INSTANCE">
+									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145200GB01#representedOrganization" />
+									<id extension="RYE" root="2.16.840.1.113883.2.1.3.2.4.19.1" />
+									<name>RepresentedOrg Name</name>
+								</representedOrganization>
+							</assignedAuthor>
+						</author>
+						<custodian typeCode="CST">
+							<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145018UK03#AssignedCustodian" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+							<assignedCustodian classCode="ASSIGNED">
+								<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145018UK03#AssignedCustodian" />
+								<representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
+									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145018UK03#representedCustodianOrganization" />
+									<id extension="RYE" root="2.16.840.1.113883.2.1.3.2.4.19.2" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+									<name>CustodianName RYE</name>
+								</representedCustodianOrganization>
+							</assignedCustodian>
+						</custodian>
+						<informationRecipient typeCode="PRCP">
+							<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145203GB03#IntendedRecipient" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+							<intendedRecipient classCode="ASSIGNED">
+								<templateId extension="COCD_TP145203GB03#IntendedRecipient" root="2.16.840.1.113883.2.1.3.2.4.18.2" />
+								<receivedOrganization classCode="ORG" determinerCode="INSTANCE">
+									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145203GB03#representedOrganization" />
+									<id extension="RSHSO14A" root="2.16.840.1.113883.2.1.3.2.4.19.2" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+									<name>InformationRecipient IntendedRecipient Name RSHS014A</name>
+								</receivedOrganization>
+							</intendedRecipient>
+						</informationRecipient>
+						<informationRecipient typeCode="TRC">
+							<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145203GB03#IntendedRecipient" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+							<intendedRecipient classCode="ASSIGNED">
+								<templateId extension="COCD_TP145203GB03#IntendedRecipient" root="2.16.840.1.113883.2.1.3.2.4.18.2" />
+								<receivedOrganization classCode="ORG" determinerCode="INSTANCE">
+									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145203GB03#representedOrganization" />
+									<id extension="J82633" root="2.16.840.1.113883.2.1.3.2.4.19.2" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+									<name>InformationRecipient IntendedRecipient Name J82633</name>
+								</receivedOrganization>
+							</intendedRecipient>
+						</informationRecipient>
+						<authorization typeCode="AUTH">
+							<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146226GB02#Consent" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+							<consent classCode="CONS" moodCode="EVN">
+								<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146226GB02#Consent" />
+								<id root="85B12A63-E1BB-4E26-96C0-6AA091CE69DB" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+								<code code="425691002" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Consent given for electronic record sharing" />
+								<statusCode code="completed" />
+							</consent>
+						</authorization>
+						<componentOf typeCode="COMP">
+							<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146232GB01#EncompassingEncounter" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+							<encompassingEncounter classCode="ENC" moodCode="EVN">
+								<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146232GB01#EncompassingEncounter" />
+								<id extension="AdastraCaseGUID34" root="2.16.840.1.113883.2.1.3.2.4.18.34" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+								<id extension="AdastraCase59132" root="2.16.840.1.113883.2.1.3.2.4.18.35" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+								<id extension="AdastraCaseGUID49" root="2.16.840.1.113883.2.1.3.2.4.18.49" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+								<code code="NHS111Encounter" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.326" displayName="NHS111 Encounter" />
+								<effectiveTime>
+									<low value="20210406115411+0100" />
+									<high value="20210406123327+0100" />
+								</effectiveTime>
+								<dischargeDispositionCode codeSystem="2.16.840.1.113883.2.1.3.2.4.17.325" code="DispoCodeDx06" displayName="DispoName - To contact a local service within 6 hours(DX06)" />
+								<responsibleParty typeCode="RESP">
+									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146232GB01#responsibleParty" />
+									<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145210GB01#AssignedEntity" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+									<assignedEntity classCode="ASSIGNED">
+										<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145210GB01#AssignedEntity" />
+										<id nullFlavor="NI" />
+										<code code="R0010" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.196" displayName="Medical Director" />
+										<assignedPerson classCode="PSN" determinerCode="INSTANCE">
+											<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145210GB01#assignedPerson" />
+											<name>
+												<given>ResponsablePartyMD GivenName</given>
+												<family>ResponsablePartyMD FamilyName</family>
+											</name>
+										</assignedPerson>
+										<representedOrganization classCode="ORG" determinerCode="INSTANCE">
+											<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145210GB01#representedOrganization" />
+											<id extension="RYE" root="2.16.840.1.113883.2.1.3.2.4.19.1" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+											<name>RepresentedOrgName</name>
+										</representedOrganization>
+									</assignedEntity>
+								</responsibleParty>
+								<location typeCode="LOC">
+									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146232GB01#location" />
+									<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145222GB02#HealthCareFacility" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+									<healthCareFacility classCode="ISDLOC">
+										<templateId extension="COCD_TP145222GB02#HealthCareFacility" root="2.16.840.1.113883.2.1.3.2.4.18.2" />
+										<id nullFlavor="NA" />
+										<location classCode="PLC" determinerCode="INSTANCE">
+											<templateId extension="COCD_TP145222GB02#location" root="2.16.840.1.113883.2.1.3.2.4.18.2" />
+											<name>LocaitonHealthcareFacility Incident Location</name>
+											<addr use="PHYS" xmlns:npfitlc="NPFIT:HL7:Localisation">
+												<streetAddressLine>HealthCareFacility AddressLine1</streetAddressLine>
+												<streetAddressLine>HealthCareFacility AddressLine2</streetAddressLine>
+												<streetAddressLine>HealthCareFacility AddressLine3</streetAddressLine>
+												<streetAddressLine>HealthCareFacility AddressLine4</streetAddressLine>
+												<streetAddressLine>HealthCareFacility AddressLine5</streetAddressLine>
+												<postalCode>LH25 4NS</postalCode>
+											</addr>
+										</location>
+									</healthCareFacility>
+								</location>
+							</encompassingEncounter>
+						</componentOf>
+						<component typeCode="COMP" contextConductionInd="true">
+							<structuredBody classCode="DOCBODY" moodCode="EVN">
+								<component typeCode="COMP" contextConductionInd="true">
+									<section classCode="DOCSECT" moodCode="EVN">
+										<id root="D87FE051-2F92-4ECD-A04B-BA87F6E320B8" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+										<entry typeCode="COMP" contextConductionInd="true">
+											<npfitlc:contentId extension="COCD_TP146002GB01#ObservationMedia" root="2.16.840.1.113883.2.1.3.2.4.18.16" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+											<observationMedia classCode="OBS" moodCode="EVN">
+												<templateId extension="COCD_TP146002GB01#ObservationMedia" root="2.16.840.1.113883.2.1.3.2.4.18.2" />
+												<id root="1C47640D-1CC5-4CA7-9393-DFCA93E6DF9C" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+												<value representation="B64" mediaType="text/xml"></value>
+												<participant typeCode="DEV" contextControlCode="OP">
+													<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146002GB01#participant" />
+													<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145000GB01#ParticipantRole" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+													<participantRole classCode="ROL">
+														<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145000GB01#ParticipantRole" />
+														<code code="TS" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.418" />
+														<playingDevice classCode="DEV" determinerCode="INSTANCE">
+															<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145000GB01#playingDevice" />
+															<manufacturerModelName displayName="Pathways" />
+															<softwareName displayName="2.4" />
+														</playingDevice>
+													</participantRole>
+												</participant>
+											</observationMedia>
+										</entry>
+										<component typeCode="COMP" contextConductionInd="true" xmlns:npfitlc="NPFIT:HL7:Localisation">
+											<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146246GB01#Section1" />
+											<section classCode="DOCSECT" moodCode="EVN">
+												<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
+												<id root="81DA6DE0-AAE1-4042-A940-041D5DC90F05" />
+												<code code="886891000000102" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Patient Reported Condition" />
+												<title>ComponentTitle - Patient's Reported Condition</title>
+												<text>
+													<content>ComponentText - Pharmacy ITK Testing</content>
+													<br />
+												</text>
+											</section>
+										</component>
+										<component typeCode="COMP" contextConductionInd="true">
+											<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146246GB01#Section1" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+											<section classCode="DOCSECT" moodCode="EVN">
+												<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
+												<id root="61AF5607-2273-4B1E-8E8D-34FACAC3C79C" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+												<title>ComponentTitle - Pathways Disposition</title>
+												<text>ComponentText - To contact a local service within 6 hours (Dx06)                                         <br />
+													<br />Selected service: Urgent Treatment Centre (GP led), Royal South Hant<br />
+												</text>
+											</section>
+										</component>
+										<component typeCode="COMP" contextConductionInd="true">
+											<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146246GB01#Section1" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+											<section classCode="DOCSECT" moodCode="EVN">
+												<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
+												<id root="B649D94E-973B-4AA1-9B11-EC69524DDD25" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+												<title>ComponentTitle - Consultation Summary</title>
+												<text>ComponentText - Illness<br />Warm to touch<br />Nausea without vomiting<br />Abdominal pain also present<br />Moderately severe pain<br />Flank pain<br />Fever at time of assessment or in last 12 hours<br />
+												</text>
+											</section>
+										</component>
+										<component typeCode="COMP" contextConductionInd="true">
+											<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146246GB01#Section1" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+											<section classCode="DOCSECT" moodCode="EVN">
+												<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
+												<id root="B7DC786D-59B8-41F3-8230-3187CB9F6CC2" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+												<title>ComponentTitle - Pathways Assessment</title>
+												<text>ComponentText - An injury or health problem was the reason for the contact.<br />Heavy bleeding had not occurred in the previous 30 minutes.<br />An illness or health problem was the main problem.<br />User Comments: Pharmacy ITK Testing<br />The individual was not fighting for breath.<br />The main reason for the contact was not an allergic reaction, chest/upper back pain, recent fit/seizure, suicide attempt, new confusion or suspected stroke.<br />The main reason for contact was not declared diabetic hypo/hyperglycaemia or ICD shock.<br />The skin on the torso felt normal, warm or hot.<br />Pathway selected - Vomiting and/or Nausea<br />The individual had not vomited.<br />The individual did not also have diarrhoea.<br />The symptoms did not follow drinking alcohol.<br />Abdominal pain was also present.<br />The pain interfered with normal activity.<br />The individual was able to carry out most or all normal activities.<br />The individual had not ingested a harmful or toxic substance.<br />There had been no black and tarry or red/maroon bowel motions.<br />There was no new or worsening confusion.<br />Breathing harder or faster when doing nothing was not described.<br />There was no new shoulder tip pain or pain in the lower right abdomen.<br />The individual had not been in constant pain for 4 hours or more.<br />There was no previous history of diabetes.<br />There was flank pain.<br />There was a fever at the time of assessment or within the previous 12 hours.<br />There was no new, widespread, red rash.<br />Instructions given were: The individual needs to contact a local service within 6 hours.<br />Directory of Services referral: Urgent Treatment Centre (GP led), Royal South Hants Hospital<br />
+												</text>
+											</section>
+										</component>
+										<component typeCode="COMP" contextConductionInd="true">
+											<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146246GB01#Section1" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+											<section classCode="DOCSECT" moodCode="EVN">
+												<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
+												<id root="546BED65-0EFC-405D-8EFF-8FC221E4FC9B" xmlns:npfitlc="NPFIT:HL7:Localisation" />
+												<title>ComponentTitle - Advice Given</title>
+												<text>ComponentText - I will arrange for a clinician to contact the individual. I need to ask some further questions in order to determine the best way to do this.<br />If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call us back.<br />
+													<br />
+												</text>
+											</section>
+										</component>
+										<component typeCode="COMP" contextConductionInd="true" xmlns:npfitlc="NPFIT:HL7:Localisation">
+											<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146246GB01#Section1" />
+											<section classCode="DOCSECT" moodCode="EVN">
+												<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
+												<id root="7D1B554B-326A-4678-8B4F-1DB909C547F9" />
+												<code code="1052951000000105" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Information And Advice Given" />
+												<title>ComponentTitle - Information And Advice Given</title>
+												<text />
+											</section>
+										</component>
+										<component typeCode="COMP" contextConductionInd="true" xmlns:npfitlc="NPFIT:HL7:Localisation">
+											<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146246GB01#Section1" />
+											<section classCode="DOCSECT" moodCode="EVN">
+												<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
+												<id root="9000C74A-77C9-457B-B933-3273A8FF6079" />
+												<code code="913341000000104" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Disposition details" />
+												<title>ComponentTitle - Disposition</title>
+												<text>
+													<content>ComponentTextConent - To contact a local service within 6 hours<br />
+													</content>
+													<br />
+													<br />
+												</text>
+											</section>
+										</component>
+									</section>
+								</component>
+							</structuredBody>
+						</component>
+					</ClinicalDocument>
+				</payload>
+			</payloads>
+		</DistributionEnvelope>
+	</s:Body>
+</s:Envelope>	

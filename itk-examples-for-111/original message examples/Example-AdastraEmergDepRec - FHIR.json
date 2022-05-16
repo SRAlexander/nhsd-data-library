@@ -1,0 +1,672 @@
+{
+  "resourceType": "Bundle",
+  "identifier": {
+    "type": {
+      "text": "ClinicalDocument VersionNumber"
+    },
+    "value": "1"
+  },
+  "type": "message",
+  "entry": [ {
+    "fullUrl": "urn:uuid:7AEFFED7-78AF-4940-9EE2-5FAA3920ECFE",
+    "resource": {
+      "resourceType": "MessageHeader",
+      "id": "7AEFFED7-78AF-4940-9EE2-5FAA3920ECFE",
+      "event": {
+        "system": "https://fhir.nhs.uk/STU3/CodeSystem/EventType-1",
+        "code": "referral-1",
+        "display": "Referral"
+      },
+      "destination": [ {
+        "endpoint": "urn:nhs-uk:addressing:ods:RSHSO14A:DOSServiceID:2000006423"
+      } ],
+      "timestamp": "2021-04-06T11:33:35.000+00:00",
+      "source": {
+        "name": "NHS 111 Adaptor",
+        "endpoint": "http://localhost:8080/report"
+      },
+      "reason": {
+        "coding": [ {
+          "system": "urn:nhs-itk:ns:201005:interaction",
+          "code": "urn:nhs-itk:interaction:primaryEmergencyDepartmentRecipientNHS111CDADocument-v2-0"
+        } ]
+      }
+    }
+  }, {
+    "fullUrl": "urn:uuid:651544a4-3e7d-4d46-8b6d-9df4a1fb1f16",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "651544a4-3e7d-4d46-8b6d-9df4a1fb1f16",
+      "identifier": [ {
+        "system": "2.16.840.1.113883.2.1.3.2.4.18.34",
+        "value": "AdastraCaseGUID34"
+      }, {
+        "system": "2.16.840.1.113883.2.1.3.2.4.18.35",
+        "value": "AdastraCase59132"
+      }, {
+        "system": "2.16.840.1.113883.2.1.3.2.4.18.49",
+        "value": "AdastraCaseGUID49"
+      } ],
+      "status": "finished",
+      "type": [ {
+        "text": "111 Encounter Referral"
+      } ],
+      "subject": {
+        "reference": "urn:uuid:f2553bc6-9314-4fc8-9015-c1f8f38de74c"
+      },
+      "participant": [ {
+        "type": [ {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/ValueSet/encounter-participant-type",
+            "code": "PPRF",
+            "display": "Author"
+          } ]
+        } ],
+        "individual": {
+          "reference": "urn:uuid:f0cf028d-c48d-4c53-b989-f614002327da"
+        }
+      }, {
+        "type": [ {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/ValueSet/encounter-participant-type",
+            "code": "ATND",
+            "display": "Responsible Party"
+          } ]
+        } ],
+        "individual": {
+          "reference": "urn:uuid:28e1ecee-4b51-4c1a-b4e1-9dddf9d4aa04"
+        }
+      } ],
+      "period": {
+        "start": "2021-04-06T11:33:35+00:00"
+      },
+      "location": [ {
+        "location": {
+          "reference": "urn:uuid:19e59a56-00b1-4c6d-a7d7-2c3b82d3e6d3"
+        },
+        "status": "active"
+      }, {
+        "location": {
+          "reference": "urn:uuid:1c60080e-b0a3-4021-90f9-4dafe082e247"
+        },
+        "status": "completed"
+      } ],
+      "serviceProvider": {
+        "reference": "urn:uuid:ff3f4530-90be-432a-9cf1-e27deeff944a"
+      }
+    }
+  }, {
+    "fullUrl": "urn:uuid:ff3f4530-90be-432a-9cf1-e27deeff944a",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "ff3f4530-90be-432a-9cf1-e27deeff944a",
+      "active": true,
+      "type": [ {
+        "text": "CST"
+      } ],
+      "name": "CustodianName RYE"
+    }
+  }, {
+    "fullUrl": "urn:uuid:f0cf028d-c48d-4c53-b989-f614002327da",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "f0cf028d-c48d-4c53-b989-f614002327da",
+      "active": true,
+      "name": [ {
+        "use": "official",
+        "family": "AuthorAssignedPerson FamilyName",
+        "given": [ "AuthorAssignedPerson GivenName" ]
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:28e1ecee-4b51-4c1a-b4e1-9dddf9d4aa04",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "28e1ecee-4b51-4c1a-b4e1-9dddf9d4aa04",
+      "active": true,
+      "name": [ {
+        "use": "official",
+        "family": "ResponsablePartyMD FamilyName",
+        "given": [ "ResponsablePartyMD GivenName" ]
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:19e59a56-00b1-4c6d-a7d7-2c3b82d3e6d3",
+    "resource": {
+      "resourceType": "Location",
+      "id": "19e59a56-00b1-4c6d-a7d7-2c3b82d3e6d3",
+      "managingOrganization": {
+        "reference": "urn:uuid:40f2814d-5cd6-4130-a0de-75ef939949f8"
+      }
+    }
+  }, {
+    "fullUrl": "urn:uuid:40f2814d-5cd6-4130-a0de-75ef939949f8",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "40f2814d-5cd6-4130-a0de-75ef939949f8",
+      "identifier": [ {
+        "value": "J82633"
+      } ],
+      "type": [ {
+        "text": "GP Practice"
+      } ],
+      "name": "ProviderOrginization Name",
+      "telecom": [ {
+        "system": "phone",
+        "value": "tel:01730892412",
+        "use": "work"
+      } ],
+      "address": [ {
+        "use": "work",
+        "line": [ "Provider Address Line 1", "Provider Address Line 2", "Provider Address Line 3", "Provider Address Line 4" ],
+        "postalCode": "WP25 4NS"
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:1c60080e-b0a3-4021-90f9-4dafe082e247",
+    "resource": {
+      "resourceType": "Location",
+      "id": "1c60080e-b0a3-4021-90f9-4dafe082e247",
+      "name": "LocaitonHealthcareFacility Incident Location",
+      "address": {
+        "type": "physical",
+        "line": [ "HealthCareFacility AddressLine1", "HealthCareFacility AddressLine2", "HealthCareFacility AddressLine3", "HealthCareFacility AddressLine4", "HealthCareFacility AddressLine5" ],
+        "postalCode": "LH25 4NS"
+      }
+    }
+  }, {
+    "fullUrl": "urn:uuid:f2553bc6-9314-4fc8-9015-c1f8f38de74c",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "f2553bc6-9314-4fc8-9015-c1f8f38de74c",
+      "identifier": [ {
+        "extension": [ {
+          "url": "https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1",
+              "code": "01"
+            } ]
+          }
+        } ],
+        "system": "https://fhir.nhs.uk/Id/nhs-number",
+        "value": "9990004951"
+      } ],
+      "active": true,
+      "name": [ {
+        "use": "official",
+        "family": "Patient Family Name",
+        "given": [ "Patient Given Name" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "tel:07948625625",
+        "use": "home"
+      }, {
+        "system": "phone",
+        "value": "tel:07948625625"
+      } ],
+      "gender": "female",
+      "birthDate": "2015-04-01",
+      "address": [ {
+        "use": "home",
+        "line": [ "Home Address Line 1", "Home Address Line 2", "Home Address Line 3", "Home Address Line 4", "Home Address Line 5" ],
+        "postalCode": "HA25 4NS"
+      } ],
+      "generalPractitioner": [ {
+        "reference": "urn:uuid:d185efe6-7ce4-4aeb-b871-28271ee26360"
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:d185efe6-7ce4-4aeb-b871-28271ee26360",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "d185efe6-7ce4-4aeb-b871-28271ee26360",
+      "identifier": [ {
+        "value": "J82633"
+      } ],
+      "type": [ {
+        "text": "GP Practice"
+      } ],
+      "name": "ProviderOrginization Name",
+      "telecom": [ {
+        "system": "phone",
+        "value": "tel:01730892412",
+        "use": "work"
+      } ],
+      "address": [ {
+        "use": "work",
+        "line": [ "Provider Address Line 1", "Provider Address Line 2", "Provider Address Line 3", "Provider Address Line 4" ],
+        "postalCode": "WP25 4NS"
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:5e7ceefb-059f-4a41-9ad5-eb78e122efa6",
+    "resource": {
+      "resourceType": "HealthcareService",
+      "id": "5e7ceefb-059f-4a41-9ad5-eb78e122efa6",
+      "active": true,
+      "providedBy": {
+        "reference": "urn:uuid:dc8dc09e-e18a-4286-b51f-645b729e9e79"
+      },
+      "location": [ {
+        "reference": "urn:uuid:16b0c907-2d80-4100-aa22-1a768542668b"
+      } ],
+      "name": "InformationRecipient IntendedRecipient Name RSHS014A"
+    }
+  }, {
+    "fullUrl": "urn:uuid:16b0c907-2d80-4100-aa22-1a768542668b",
+    "resource": {
+      "resourceType": "Location",
+      "id": "16b0c907-2d80-4100-aa22-1a768542668b",
+      "managingOrganization": {
+        "reference": "urn:uuid:dc8dc09e-e18a-4286-b51f-645b729e9e79"
+      }
+    }
+  }, {
+    "fullUrl": "urn:uuid:dc8dc09e-e18a-4286-b51f-645b729e9e79",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "dc8dc09e-e18a-4286-b51f-645b729e9e79",
+      "identifier": [ {
+        "value": "RSHSO14A"
+      } ],
+      "type": [ {
+        "coding": [ {
+          "code": "PRCP",
+          "display": "InformationRecipient IntendedRecipient Name RSHS014A"
+        } ]
+      } ],
+      "name": "InformationRecipient IntendedRecipient Name RSHS014A"
+    }
+  }, {
+    "fullUrl": "urn:uuid:98c16573-9647-4fdc-9366-9de13c5bcc61",
+    "resource": {
+      "resourceType": "ReferralRequest",
+      "id": "98c16573-9647-4fdc-9366-9de13c5bcc61",
+      "status": "active",
+      "intent": "plan",
+      "priority": "routine",
+      "subject": {
+        "reference": "urn:uuid:f2553bc6-9314-4fc8-9015-c1f8f38de74c"
+      },
+      "context": {
+        "reference": "urn:uuid:651544a4-3e7d-4d46-8b6d-9df4a1fb1f16"
+      },
+      "occurrencePeriod": {
+        "start": "2021-08-25T03:53:00+00:00",
+        "end": "2021-08-25T04:53:00+00:00"
+      },
+      "authoredOn": "2021-04-06T11:33:27+00:00",
+      "requester": {
+        "agent": {
+          "reference": "urn:uuid:aeaa3136-463e-4b4f-a035-b83a03f7e6cd"
+        },
+        "onBehalfOf": {
+          "reference": "urn:uuid:ff3f4530-90be-432a-9cf1-e27deeff944a"
+        }
+      },
+      "recipient": [ {
+        "reference": "urn:uuid:5e7ceefb-059f-4a41-9ad5-eb78e122efa6"
+      } ],
+      "reasonReference": [ {
+        "reference": "urn:uuid:5fa26ed8-5bee-4aad-b25f-cadfe2a2f5fb"
+      } ],
+      "supportingInfo": [ {
+        "reference": "urn:uuid:448038cc-24eb-4237-8d63-58adeab65c5d"
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:448038cc-24eb-4237-8d63-58adeab65c5d",
+    "resource": {
+      "resourceType": "ProcedureRequest",
+      "id": "448038cc-24eb-4237-8d63-58adeab65c5d",
+      "status": "active",
+      "intent": "plan",
+      "priority": "routine",
+      "doNotPerform": false,
+      "code": {
+        "coding": [ {
+          "system": "2.16.840.1.113883.2.1.3.2.4.17.325",
+          "code": "DispoCodeDx06",
+          "display": "DispoName - To contact a local service within 6 hours(DX06)"
+        } ]
+      },
+      "subject": {
+        "reference": "urn:uuid:f2553bc6-9314-4fc8-9015-c1f8f38de74c"
+      },
+      "occurrencePeriod": {
+        "start": "2021-08-25T03:53:00+00:00",
+        "end": "2021-08-25T04:53:00+00:00"
+      },
+      "reasonReference": [ {
+        "reference": "urn:uuid:5fa26ed8-5bee-4aad-b25f-cadfe2a2f5fb"
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:a7e1db90-e583-4e61-a08b-eb2ef53bd46c",
+    "resource": {
+      "resourceType": "Composition",
+      "id": "a7e1db90-e583-4e61-a08b-eb2ef53bd46c",
+      "identifier": {
+        "use": "usual",
+        "value": "A8E3FB32-6805-4191-B071-EA540A9318CD"
+      },
+      "status": "final",
+      "type": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "371531000",
+          "display": "Report of clinical encounter (record artifact)"
+        } ]
+      },
+      "subject": {
+        "reference": "urn:uuid:f2553bc6-9314-4fc8-9015-c1f8f38de74c"
+      },
+      "encounter": {
+        "reference": "urn:uuid:651544a4-3e7d-4d46-8b6d-9df4a1fb1f16"
+      },
+      "date": "2021-08-25T03:53:00+00:00",
+      "author": [ {
+        "reference": "urn:uuid:f0cf028d-c48d-4c53-b989-f614002327da"
+      } ],
+      "title": "111 Report",
+      "confidentiality": "N",
+      "section": [ {
+        "section": [ {
+          "title": "ComponentTitle - Patient's Reported Condition",
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">&lt;xml-fragment xmlns:npfitlc=&quot;NPFIT:HL7:Localisation&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:content xmlns:urn=&quot;urn:hl7-org:v3&quot;&gt;ComponentText - Pharmacy ITK Testing&lt;/urn:content&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t&lt;/xml-fragment&gt;</div>"
+          }
+        }, {
+          "title": "ComponentTitle - Pathways Disposition",
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">&lt;xml-fragment xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;ComponentText - To contact a local service within 6 hours (Dx06)                                         &lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;Selected service: Urgent Treatment Centre (GP led), Royal South Hant&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t&lt;/xml-fragment&gt;</div>"
+          }
+        }, {
+          "title": "ComponentTitle - Consultation Summary",
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">&lt;xml-fragment xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;ComponentText - Illness&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;Warm to touch&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;Nausea without vomiting&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;Abdominal pain also present&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;Moderately severe pain&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;Flank pain&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;Fever at time of assessment or in last 12 hours&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t&lt;/xml-fragment&gt;</div>"
+          }
+        }, {
+          "title": "ComponentTitle - Pathways Assessment",
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">&lt;xml-fragment xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;ComponentText - An injury or health problem was the reason for the contact.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;Heavy bleeding had not occurred in the previous 30 minutes.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;An illness or health problem was the main problem.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;User Comments: Pharmacy ITK Testing&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;The individual was not fighting for breath.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;The main reason for the contact was not an allergic reaction, chest/upper back pain, recent fit/seizure, suicide attempt, new confusion or suspected stroke.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;The main reason for contact was not declared diabetic hypo/hyperglycaemia or ICD shock.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;The skin on the torso felt normal, warm or hot.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;Pathway selected - Vomiting and/or Nausea&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;The individual had not vomited.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;The individual did not also have diarrhoea.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;The symptoms did not follow drinking alcohol.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;Abdominal pain was also present.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;The pain interfered with normal activity.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;The individual was able to carry out most or all normal activities.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;The individual had not ingested a harmful or toxic substance.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;There had been no black and tarry or red/maroon bowel motions.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;There was no new or worsening confusion.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;Breathing harder or faster when doing nothing was not described.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;There was no new shoulder tip pain or pain in the lower right abdomen.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;The individual had not been in constant pain for 4 hours or more.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;There was no previous history of diabetes.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;There was flank pain.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;There was a fever at the time of assessment or within the previous 12 hours.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;There was no new, widespread, red rash.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;Instructions given were: The individual needs to contact a local service within 6 hours.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;Directory of Services referral: Urgent Treatment Centre (GP led), Royal South Hants Hospital&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t&lt;/xml-fragment&gt;</div>"
+          }
+        }, {
+          "title": "ComponentTitle - Advice Given",
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">&lt;xml-fragment xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;ComponentText - I will arrange for a clinician to contact the individual. I need to ask some further questions in order to determine the best way to do this.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call us back.&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t&lt;/xml-fragment&gt;</div>"
+          }
+        }, {
+          "title": "ComponentTitle - Information And Advice Given",
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">&lt;xml-fragment xmlns:npfitlc=&quot;NPFIT:HL7:Localisation&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;/&gt;</div>"
+          }
+        }, {
+          "title": "ComponentTitle - Disposition",
+          "text": {
+            "status": "generated",
+            "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">&lt;xml-fragment xmlns:npfitlc=&quot;NPFIT:HL7:Localisation&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:content xmlns:urn=&quot;urn:hl7-org:v3&quot;&gt;ComponentTextConent - To contact a local service within 6 hours&lt;urn:br/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;/urn:content&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t\t&lt;urn:br xmlns:urn=&quot;urn:hl7-org:v3&quot;/&gt;\n\t\t\t\t\t\t\t\t\t\t\t\t&lt;/xml-fragment&gt;</div>"
+          }
+        } ]
+      }, {
+        "title": "CarePlan",
+        "entry": [ {
+          "reference": "urn:uuid:af4da5d5-f866-42d0-bff6-c4ace4839a15"
+        } ]
+      }, {
+        "title": "ReferralRequest",
+        "entry": [ {
+          "reference": "urn:uuid:98c16573-9647-4fdc-9366-9de13c5bcc61"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:af4da5d5-f866-42d0-bff6-c4ace4839a15",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "af4da5d5-f866-42d0-bff6-c4ace4839a15",
+      "status": "completed",
+      "intent": "plan",
+      "title": "ComponentTitle - Information And Advice Given",
+      "subject": {
+        "reference": "urn:uuid:f2553bc6-9314-4fc8-9015-c1f8f38de74c"
+      },
+      "context": {
+        "reference": "urn:uuid:651544a4-3e7d-4d46-8b6d-9df4a1fb1f16"
+      },
+      "period": {
+        "start": "2021-04-06T11:33:35+00:00"
+      },
+      "author": [ {
+        "reference": "urn:uuid:40f2814d-5cd6-4130-a0de-75ef939949f8"
+      } ],
+      "addresses": [ {
+        "reference": "urn:uuid:5fa26ed8-5bee-4aad-b25f-cadfe2a2f5fb"
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:0b786990-aa60-4186-a4ae-c8f681434f29",
+    "resource": {
+      "resourceType": "Consent",
+      "id": "0b786990-aa60-4186-a4ae-c8f681434f29",
+      "identifier": {
+        "use": "usual",
+        "value": "A8E3FB32-6805-4191-B071-EA540A9318CD"
+      },
+      "status": "active",
+      "patient": {
+        "reference": "urn:uuid:f2553bc6-9314-4fc8-9015-c1f8f38de74c"
+      },
+      "period": {
+        "start": "2021-04-06T11:33:35+00:00"
+      },
+      "consentingParty": [ {
+        "reference": "urn:uuid:f2553bc6-9314-4fc8-9015-c1f8f38de74c"
+      } ],
+      "action": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "425691002",
+          "display": "Consent given for electronic record sharing"
+        } ],
+        "text": "Consent given for electronic record sharing"
+      } ],
+      "organization": [ {
+        "reference": "urn:uuid:ff3f4530-90be-432a-9cf1-e27deeff944a"
+      } ],
+      "policyRule": "http://hl7.org/fhir/ConsentPolicy/opt-out",
+      "data": [ {
+        "meaning": "related",
+        "reference": {
+          "reference": "urn:uuid:651544a4-3e7d-4d46-8b6d-9df4a1fb1f16"
+        }
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:5fa26ed8-5bee-4aad-b25f-cadfe2a2f5fb",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "5fa26ed8-5bee-4aad-b25f-cadfe2a2f5fb",
+      "clinicalStatus": "active",
+      "verificationStatus": "unknown",
+      "subject": {
+        "reference": "urn:uuid:f2553bc6-9314-4fc8-9015-c1f8f38de74c"
+      },
+      "context": {
+        "reference": "urn:uuid:651544a4-3e7d-4d46-8b6d-9df4a1fb1f16"
+      }
+    }
+  }, {
+    "fullUrl": "urn:uuid:5fe6af73-eed4-4b99-99fc-5a6297c8039c",
+    "resource": {
+      "resourceType": "PractitionerRole",
+      "id": "5fe6af73-eed4-4b99-99fc-5a6297c8039c",
+      "practitioner": {
+        "reference": "urn:uuid:f0cf028d-c48d-4c53-b989-f614002327da"
+      },
+      "organization": {
+        "reference": "urn:uuid:3fb03855-ca64-4e4f-8b47-9069ac5888d5"
+      },
+      "code": [ {
+        "coding": [ {
+          "system": "2.16.840.1.113883.2.1.3.2.4.17.339",
+          "code": "DOCTOR",
+          "display": "Doctor"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:3fb03855-ca64-4e4f-8b47-9069ac5888d5",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "3fb03855-ca64-4e4f-8b47-9069ac5888d5",
+      "identifier": [ {
+        "value": "RYE"
+      } ],
+      "name": "RepresentedOrg Name"
+    }
+  }, {
+    "fullUrl": "urn:uuid:21845553-9a31-4446-bcd1-43bb3ea89e1e",
+    "resource": {
+      "resourceType": "PractitionerRole",
+      "id": "21845553-9a31-4446-bcd1-43bb3ea89e1e",
+      "practitioner": {
+        "reference": "urn:uuid:28e1ecee-4b51-4c1a-b4e1-9dddf9d4aa04"
+      },
+      "organization": {
+        "reference": "urn:uuid:793a90ca-135b-4e2f-ab69-bfba20e92dd0"
+      },
+      "code": [ {
+        "coding": [ {
+          "system": "2.16.840.1.113883.2.1.3.2.4.17.196",
+          "code": "R0010",
+          "display": "Medical Director"
+        } ]
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:793a90ca-135b-4e2f-ab69-bfba20e92dd0",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "793a90ca-135b-4e2f-ab69-bfba20e92dd0",
+      "identifier": [ {
+        "value": "RYE"
+      } ],
+      "name": "RepresentedOrgName"
+    }
+  }, {
+    "fullUrl": "urn:uuid:b43af550-f19f-41e8-a680-8e9b2ecb9258",
+    "resource": {
+      "resourceType": "RelatedPerson",
+      "id": "b43af550-f19f-41e8-a680-8e9b2ecb9258",
+      "patient": {
+        "reference": "urn:uuid:f2553bc6-9314-4fc8-9015-c1f8f38de74c"
+      },
+      "relationship": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/v2/0131",
+          "code": "C",
+          "display": "Emergency Contact"
+        } ]
+      },
+      "telecom": [ {
+        "system": "phone",
+        "value": "tel:07948625625"
+      } ]
+    }
+  }, {
+    "fullUrl": "urn:uuid:aeaa3136-463e-4b4f-a035-b83a03f7e6cd",
+    "resource": {
+      "resourceType": "Device",
+      "id": "aeaa3136-463e-4b4f-a035-b83a03f7e6cd",
+      "model": "111 Adaptor",
+      "version": "0.9.0"
+    }
+  }, {
+    "fullUrl": "urn:uuid:74af9f70-d98b-4e1d-9202-5b2d494d529a",
+    "resource": {
+      "resourceType": "List",
+      "id": "74af9f70-d98b-4e1d-9202-5b2d494d529a",
+      "status": "current",
+      "mode": "working",
+      "title": "111 Report List",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "225390008",
+          "display": "Triage"
+        } ]
+      },
+      "subject": {
+        "reference": "urn:uuid:f2553bc6-9314-4fc8-9015-c1f8f38de74c"
+      },
+      "encounter": {
+        "reference": "urn:uuid:651544a4-3e7d-4d46-8b6d-9df4a1fb1f16"
+      },
+      "date": "2021-08-25T03:53:00+00:00",
+      "source": {
+        "reference": "urn:uuid:aeaa3136-463e-4b4f-a035-b83a03f7e6cd"
+      },
+      "orderedBy": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/list-order",
+          "code": "event-date",
+          "display": "Sorted by Event Date"
+        } ]
+      },
+      "entry": [ {
+        "item": {
+          "reference": "urn:uuid:28e1ecee-4b51-4c1a-b4e1-9dddf9d4aa04"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:d185efe6-7ce4-4aeb-b871-28271ee26360"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:b43af550-f19f-41e8-a680-8e9b2ecb9258"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:f0cf028d-c48d-4c53-b989-f614002327da"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:3fb03855-ca64-4e4f-8b47-9069ac5888d5"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:ff3f4530-90be-432a-9cf1-e27deeff944a"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:40f2814d-5cd6-4130-a0de-75ef939949f8"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:5fa26ed8-5bee-4aad-b25f-cadfe2a2f5fb"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:dc8dc09e-e18a-4286-b51f-645b729e9e79"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:793a90ca-135b-4e2f-ab69-bfba20e92dd0"
+        }
+      }, {
+        "item": {
+          "reference": "urn:uuid:98c16573-9647-4fdc-9366-9de13c5bcc61"
+        }
+      } ]
+    }
+  } ]
+}
