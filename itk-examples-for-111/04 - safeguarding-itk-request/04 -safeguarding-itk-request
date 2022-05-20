@@ -161,7 +161,7 @@
                   <low value="20201030182813+0000" />
                   <high value="20201030182858+0000" />
                 </effectiveTime>
-                <dischargeDispositionCode codeSystem="2.16.840.1.113883.2.1.3.2.4.17.325" code="Dx0106" displayName="Emergency Ambulance Response for Respiratory Distress" />
+                <dischargeDispositionCode codeSystem="2.16.840.1.113883.2.1.3.2.4.17.325" code="Dx42" displayName="Immediate referral - Safeguarding" />
                 <responsibleParty typeCode="RESP">
                   <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146232GB01#responsibleParty" />
                   <npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145210GB01#AssignedEntity" />
@@ -245,7 +245,7 @@
                         <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
                         <id root="80A3B072-88F9-4B30-BE5C-6B17E927F23C" />
                         <title>Pathways Disposition</title>
-                        <text>Emergency Ambulance Response for Respiratory Distress (Dx0106)
+                        <text>Immediate referral - Safeguarding (Dx42)
                     <br /><br />
                     Selected service: **TESTING ONLY** DO NOT SEND PATIENTS - ED Test Se<br /></text>
                       </section>
@@ -265,7 +265,7 @@
                         <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
                         <id root="D0EB1C88-F4C9-4067-9AB3-445255533D22" />
                         <title>Pathways Assessment</title>
-                        <text>An injury or health problem was the reason for the contact.<br />Heavy bleeding had not occurred in the previous 2 hours.<br />An illness or health problem was the main problem.<br />User Comments: TEST<br />The individual was not fighting for breath.<br />The main reason for the assessment was not an allergic reaction, heart attack, chest/upper back pain, probable stroke, recent fit/seizure or suicide attempt.<br />The main reason for contact was not new confusion, declared diabetic hypo/hyperglycaemia, or ICD shock.<br />The skin on the torso felt normal, warm or hot.<br />Pathway selected - Nosebleeds without Injury<br />The individual was not feeling faint or dizzy.<br />The nose was continuing to bleed.<br />There was no nasal foreign body.<br />Constant pressure had been applied to the soft part of the nose for at least 10 minutes.<br />Instructions given were: The individual needs to Emergency Ambulance Response for Respiratory Distress.<br />Directory of Services referral: **TESTING ONLY** DO NOT SEND PATIENTS - ED Test Service for EDDI<br />Advice given:
+                        <text>An injury or health problem was the reason for the contact.<br />Heavy bleeding had not occurred in the previous 2 hours.<br />An illness or health problem was the main problem.<br />User Comments: TEST<br />The individual was not fighting for breath.<br />The main reason for the assessment was not an allergic reaction, heart attack, chest/upper back pain, probable stroke, recent fit/seizure or suicide attempt.<br />The main reason for contact was not new confusion, declared diabetic hypo/hyperglycaemia, or ICD shock.<br />The skin on the torso felt normal, warm or hot.<br />Pathway selected - Nosebleeds without Injury<br />The individual was not feeling faint or dizzy.<br />The nose was continuing to bleed.<br />There was no nasal foreign body.<br />Constant pressure had been applied to the soft part of the nose for at least 10 minutes.<br />Instructions given were: The individual needs to Immediate referral - Safeguarding.<br />Directory of Services referral: **TESTING ONLY** DO NOT SEND PATIENTS - ED Test Service for EDDI<br />Advice given:
 Worsening
 <br /></text>
                       </section>
@@ -420,7 +420,7 @@ Worsening
                   <low value="20201029131333+00" inclusive="true" />
                   <high value="20201029131441+00" inclusive="true" />
                 </effectiveTime>
-                <dischargeDispositionCode code="Dx0106" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.325" displayName="Refer to a Treatment Centre within 1 hour" />
+                <dischargeDispositionCode code="Dx42" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.325" displayName="Refer to a Treatment Centre within 1 hour" />
                 <responsibleParty typeCode="RESP">
                   <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146232GB01#responsibleParty" />
                   <contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145210GB01#AssignedEntity" xmlns="NPFIT:HL7:Localisation" />
@@ -508,7 +508,7 @@ Worsening
                         <text mediaType="text/x-hl7-text+xml">
                           <br />
                           <br />
-                          <br />Refer to a Treatment Centre within 1 hour (Dx0106)
+                          <br />Refer to a Treatment Centre within 1 hour (Dx42)
                     
                     Selected service: **TEST ONLY DO NOT BOOK Birmingham Heartlands Hospital Emergency Department</text>
                       </section>

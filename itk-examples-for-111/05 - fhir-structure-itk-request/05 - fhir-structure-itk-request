@@ -1,11 +1,11 @@
 <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
-    <s:Header>
-        <a:Action s:mustUnderstand="1">urn:nhs-itk:services:201005:SendNHS111Report-v2-0</a:Action>
-        <a:MessageID>2B77B3F5-3016-4A6D-821F-152CE420E58D</a:MessageID>
-        <a:ReplyTo>
-            <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
-        </a:ReplyTo>
-        <a:To s:mustUnderstand="1">http://localhost:8080/report</a:To>
+  <s:Header>
+    <a:Action s:mustUnderstand="1">urn:nhs-itk:services:201005:SendNHS111Report-v2-0</a:Action>
+    <a:MessageID>A12F527F-3808-44BC-9272-8C8A92884A37</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+            <a:To s:mustUnderstand="1">http://localhost:8080/report</a:To>
         <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
             <wsu:Timestamp
                     xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
@@ -17,13 +17,13 @@
                 <wsse:Username>TKS Server test</wsse:Username>
             </wsse:UsernameToken>
         </wsse:Security>
-    </s:Header>
-    <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  </s:Header>
+  <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <DistributionEnvelope xmlns="urn:nhs-itk:ns:201005">
       <header trackingid="3E88A552-3BBE-463F-A45D-A6D345C75855" service="urn:nhs-itk:services:201005:SendNHS111Report-v2-0">
         <addresslist>
-          <address uri="urn:nhs-uk:addressing:ods:@@ods-code@@" />
-          <address type="2.16.840.1.113883.2.1.3.2.4.18.44" uri="@@dos-code@@" />
+          <address uri="urn:nhs-uk:addressing:ods:EM396" />
+          <address type="2.16.840.1.113883.2.1.3.2.4.18.44" uri="26428" />
         </addresslist>
         <auditIdentity>
           <id uri="urn:nhs-uk:identity:ods:Y00397" />
@@ -161,7 +161,7 @@
                   <low value="20201030182813+0000" />
                   <high value="20201030182858+0000" />
                 </effectiveTime>
-                <dischargeDispositionCode codeSystem="2.16.840.1.113883.2.1.3.2.4.17.325" code="Dx0106" displayName="Emergency Ambulance Response for Respiratory Distress" />
+                <dischargeDispositionCode codeSystem="2.16.840.1.113883.2.1.3.2.4.17.325" code="Dx02" displayName="Attend a Treatment Centre within 1 hour" />
                 <responsibleParty typeCode="RESP">
                   <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146232GB01#responsibleParty" />
                   <npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145210GB01#AssignedEntity" />
@@ -236,7 +236,7 @@
                         <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
                         <id root="E9855F27-D9F9-4397-B48E-77EBD01C984F" />
                         <title>Patient's Reported Condition</title>
-                        <text>TEST<br /></text>
+                        <text>@@patients_reported_condtion@@<br /></text>
                       </section>
                     </component>
                     <component typeCode="COMP" contextConductionInd="true">
@@ -245,9 +245,9 @@
                         <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
                         <id root="80A3B072-88F9-4B30-BE5C-6B17E927F23C" />
                         <title>Pathways Disposition</title>
-                        <text>Emergency Ambulance Response for Respiratory Distress (Dx0106)
-                    <br /><br />
-                    Selected service: **TESTING ONLY** DO NOT SEND PATIENTS - ED Test Se<br /></text>
+                        <text>@@Pathways Disposition@@
+                          <br /><br />
+                    Selected service: **TESTING ONLY** @@selected_service@@<br /></text>
                       </section>
                     </component>
                     <component typeCode="COMP" contextConductionInd="true">
@@ -256,7 +256,7 @@
                         <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
                         <id root="A6C6060A-0ECE-48DC-9F21-57814113C73D" />
                         <title>Consultation Summary</title>
-                        <text>Illness<br />Warm to touch<br />Nose bleeding freely<br />Nose bleeding despite first aid measures<br /></text>
+                        <text>@@consultation_summary@@</text>
                       </section>
                     </component>
                     <component typeCode="COMP" contextConductionInd="true">
@@ -265,9 +265,7 @@
                         <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
                         <id root="D0EB1C88-F4C9-4067-9AB3-445255533D22" />
                         <title>Pathways Assessment</title>
-                        <text>An injury or health problem was the reason for the contact.<br />Heavy bleeding had not occurred in the previous 2 hours.<br />An illness or health problem was the main problem.<br />User Comments: TEST<br />The individual was not fighting for breath.<br />The main reason for the assessment was not an allergic reaction, heart attack, chest/upper back pain, probable stroke, recent fit/seizure or suicide attempt.<br />The main reason for contact was not new confusion, declared diabetic hypo/hyperglycaemia, or ICD shock.<br />The skin on the torso felt normal, warm or hot.<br />Pathway selected - Nosebleeds without Injury<br />The individual was not feeling faint or dizzy.<br />The nose was continuing to bleed.<br />There was no nasal foreign body.<br />Constant pressure had been applied to the soft part of the nose for at least 10 minutes.<br />Instructions given were: The individual needs to Emergency Ambulance Response for Respiratory Distress.<br />Directory of Services referral: **TESTING ONLY** DO NOT SEND PATIENTS - ED Test Service for EDDI<br />Advice given:
-Worsening
-<br /></text>
+                        <text>@@pathways_assessment@@</text>
                       </section>
                     </component>
                     <component typeCode="COMP" contextConductionInd="true">
@@ -276,7 +274,7 @@ Worsening
                         <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
                         <id root="AB0DD0A6-AF03-44B0-9763-D4D5E591DC6D" />
                         <title>Advice Given</title>
-                        <text>If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call us back.<br /><br /></text>
+                        <text>@@advice_given@@<br /><br /></text>
                       </section>
                     </component>
                     <component typeCode="COMP" contextConductionInd="true">
@@ -285,7 +283,7 @@ Worsening
                         <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146246GB01#Section1" />
                         <id root="BFD3D476-3379-4C21-B9F6-0069A62664FF" />
                         <title>Special Patient Notes</title>
-                        <text>Special Notes from an external system were flagged as being present for this patient.</text>
+                        <text>@@special_patient_notes@@</text>
                       </section>
                     </component>
                   </section>
@@ -420,7 +418,7 @@ Worsening
                   <low value="20201029131333+00" inclusive="true" />
                   <high value="20201029131441+00" inclusive="true" />
                 </effectiveTime>
-                <dischargeDispositionCode code="Dx0106" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.325" displayName="Refer to a Treatment Centre within 1 hour" />
+                <dischargeDispositionCode code="Dx02" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.325" displayName="Refer to a Treatment Centre within 1 hour" />
                 <responsibleParty typeCode="RESP">
                   <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146232GB01#responsibleParty" />
                   <contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145210GB01#AssignedEntity" xmlns="NPFIT:HL7:Localisation" />
@@ -508,7 +506,7 @@ Worsening
                         <text mediaType="text/x-hl7-text+xml">
                           <br />
                           <br />
-                          <br />Refer to a Treatment Centre within 1 hour (Dx0106)
+                          <br />Refer to a Treatment Centre within 1 hour (Dx02)
                     
                     Selected service: **TEST ONLY DO NOT BOOK Birmingham Heartlands Hospital Emergency Department</text>
                       </section>
