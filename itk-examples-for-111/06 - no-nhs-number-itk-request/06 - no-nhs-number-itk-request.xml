@@ -65,7 +65,7 @@
                                 <templateId extension="COCD_TP145201GB01#PatientRole"
                                             root="2.16.840.1.113883.2.1.3.2.4.18.2"/>
 
-                                <id assigningAuthorityName="@@ods_code@@:@@ods_name@@"
+                                <id assigningAuthorityName="@@ods-code@@:@@ods-name@@"
                                     extension="@@local-patient-identifier@@"
                                     root="2.16.840.1.113883.2.1.3.2.4.18.24"/>
 
@@ -289,8 +289,8 @@
                                     <low value="@@nhs111-encounter-date-time-start@@+00"/>
                                     <high value="@@nhs111-encounter-date-time-end@@+00"/>
                                 </effectiveTime>
-                                <dischargeDispositionCode code="@@disposition-code@@" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.325"
-                                                          displayName="@@disposition-text@@"/>
+                                <dischargeDispositionCode code="Dx01" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.325"
+                                                          displayName="Urgent care wihtin 1 hour"/>
                                 <responsibleParty typeCode="RESP">
                                     <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
                                                 extension="COCD_TP146232GB01#responsibleParty"/>
