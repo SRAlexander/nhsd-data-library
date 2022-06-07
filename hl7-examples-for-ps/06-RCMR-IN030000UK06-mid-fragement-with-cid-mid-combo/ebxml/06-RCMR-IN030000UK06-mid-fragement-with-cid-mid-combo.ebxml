@@ -462,7 +462,7 @@ Content-Transfer-Encoding: 8bit
                                                                     <translation code="37251000000104" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other digital signal"/>
                                                                 </code>
                                                                 <text mediaType="image/tiff">
-                                                                    <reference value="file://localhost/588210BB-401D-41F9-84D2-978697CEEFE5_00011000.tif"/>
+                                                                    <reference value="file://localhost/588210BB-401D-41F9-84D2-978697CEEFE5_00011000.tif" \/>
                                                                 </text>
                                                             </referredToExternalDocument>
                                                         </reference>
