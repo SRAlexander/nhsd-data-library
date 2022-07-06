@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<RCMR_IN030000UK06 xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 ..\Schemas\RCMR_IN030000UK06.xsd">
+    <id root="04202AB0-ECB7-11EC-8083-AC162D1F16F0"/>
+    <creationTime value="20220615152534"/>
+    <versionCode code="V3NPfIT3.1.10"/>
+    <interactionId extension="RCMR_IN030000UK06" root="2.16.840.1.113883.2.1.3.2.4.12"/>
+    <processingCode code="P"/>
+    <processingModeCode code="T"/>
+    <acceptAckCode code="NE"/>
+    <communicationFunctionRcv typeCode="RCV">
+        <device classCode="DEV" determinerCode="INSTANCE">
+            <id extension="200000001721" root="1.2.826.0.1285.0.2.0.107"/>
+        </device>
+    </communicationFunctionRcv>
+    <communicationFunctionSnd typeCode="SND">
+        <device classCode="DEV" determinerCode="INSTANCE">
+            <id extension="200000000169" root="1.2.826.0.1285.0.2.0.107"/>
+        </device>
+    </communicationFunctionSnd>
+    <ControlActEvent classCode="CACT" moodCode="EVN">
+        <author1 typeCode="AUT">
+            <AgentSystemSDS classCode="AGNT">
+                <agentSystemSDS classCode="DEV" determinerCode="INSTANCE">
+                    <id extension="200000000169" root="1.2.826.0.1285.0.2.0.107"/>
+                </agentSystemSDS>
+            </AgentSystemSDS>
+        </author1>
+        <subject contextConductionInd="false" typeCode="SUBJ">
+            <EhrExtract classCode="EXTRACT" moodCode="EVN">
+                <id root="04202AB0-ECB7-11EC-8083-AC162D1F16F0"/>
+                <statusCode code="COMPLETE"/>
+                <availabilityTime value="20220615152534"/>
+                <recordTarget typeCode="RCT">
+                    <patient classCode="PAT">
+                        <id extension="9465716464" root="2.16.840.1.113883.2.1.4.1"/>
+                    </patient>
+                </recordTarget>
+                <author typeCode="AUT">
+                    <time value="20220615152534"/>
+                    <AgentOrgSDS classCode="AGNT">
+                        <agentOrganizationSDS classCode="ORG" determinerCode="INSTANCE">
+                            <id extension="P84009" root="1.2.826.0.1285.0.1.10"/>
+                        </agentOrganizationSDS>
+                    </AgentOrgSDS>
+                </author>
+                <destination typeCode="DST">
+                    <AgentOrgSDS classCode="AGNT">
+                        <agentOrganizationSDS classCode="ORG" determinerCode="INSTANCE">
+                            <id extension="C88032" root="1.2.826.0.1285.0.1.10"/>
+                        </agentOrganizationSDS>
+                    </AgentOrgSDS>
+                </destination>
+                <component typeCode="COMP">
+                    <ehrFolder classCode="FOLDER" moodCode="EVN">
+                        <id root="04C4CF22-ECB7-11EC-8083-AC162D1F16F0"/>
+                        <statusCode code="COMPLETE"/>
+                        <effectiveTime>
+                            <low value="19650420"/>
+                            <high value="20200821104844"/>
+                        </effectiveTime>
+                        <availabilityTime value="20220615152534"/>
+                        <author typeCode="AUT">
+                            <time value="20220615152534"/>
+                            <AgentOrgSDS classCode="AGNT">
+                                <agentOrganizationSDS classCode="ORG" determinerCode="INSTANCE">
+                                    <id extension="P84009" root="1.2.826.0.1285.0.1.10"/>
+                                </agentOrganizationSDS>
+                            </AgentOrgSDS>
+                        </author>
+                        <responsibleParty typeCode="RESP">
+                            <agentDirectory classCode="AGNT">
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04250D06-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr Stanley Fraser</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="0448C162-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Unknown Staff Member</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04229C2D-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Mr System System Supervisor</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="044195A0-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr Unknown</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="0435AEFB-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>External User</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="044195B6-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr Gp Inps-Lm-Six</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="047ACF1E-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>AILSA CRAIG MEDICAL CENTRE</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04229BB6-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>David Mcavenue</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="043F4BEE-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dean Gp Inps-Lm-Five</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04229BB4-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>System Administrator</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="042756BC-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr Jeff Green</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="0429C7D1-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Peter Whitcombe</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04202AB2-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr John Mcallister</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04250CF8-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Mrs Practice Nurse</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="043CDAA6-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr Charlie Chips</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="047ACF21-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name use="L">
+                                                <prefix>Dr</prefix>
+                                                <given>Bob</given>
+                                                <family>Wilson</family>
+                                            </name>
+                                        </agentPerson>
+                                        <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+                                            <id extension="P84009" root="2.16.840.1.113883.2.1.4.3"/>
+                                            <code code="600"/>
+                                            <name>AILSA CRAIG MEDICAL CENTRE</name>
+                                            <telecom use="WP" value="tel:01218885343">
+                                                <useablePeriod>
+                                                    <low value="20220615"/>
+                                                </useablePeriod>
+                                            </telecom>
+                                            <addr use="WP">
+                                                <streetAddressLine>986 New Road</streetAddressLine>
+                                                <streetAddressLine>Solihull</streetAddressLine>
+                                                <streetAddressLine>West Midlands</streetAddressLine>
+                                                <postalCode>B91 3DL</postalCode>
+                                                <useablePeriod>
+                                                    <low value="20220615"/>
+                                                </useablePeriod>
+                                            </addr>
+                                        </representedOrganization>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04202ABD-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr P Clarson</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="042756C2-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Mrs Anne White</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="0430F3F3-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr Pete Turnbull</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04202ABA-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Previous Practice</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04229BF0-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr David Mcavenue</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04229BBB-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr J Potter</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04381FE5-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Unknown Staff Member</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04202AB3-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name use="L">
+                                                <given>Rodney</given>
+                                                <given>M</given>
+                                                <family>Sandler</family>
+                                            </name>
+                                        </agentPerson>
+                                        <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+                                            <id extension="P84009" root="2.16.840.1.113883.2.1.4.3"/>
+                                            <code code="600"/>
+                                            <name>AILSA CRAIG MEDICAL CENTRE</name>
+                                            <telecom use="WP" value="tel:01218885343">
+                                                <useablePeriod>
+                                                    <low value="20220615"/>
+                                                </useablePeriod>
+                                            </telecom>
+                                            <addr use="WP">
+                                                <streetAddressLine>986 New Road</streetAddressLine>
+                                                <streetAddressLine>Solihull</streetAddressLine>
+                                                <streetAddressLine>West Midlands</streetAddressLine>
+                                                <postalCode>B91 3DL</postalCode>
+                                                <useablePeriod>
+                                                    <low value="20220615"/>
+                                                </useablePeriod>
+                                            </addr>
+                                        </representedOrganization>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04202AB6-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr David Stables</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04419562-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr Boubker Beach</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04229BB1-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr Nicole Norman</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="0441957B-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr Wendy Hughes</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04229BB8-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr J Mccormack</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="0441959A-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr Gp Inps-Lm-Two</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="043F4BEC-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Mr Peter Salisbury</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04229BD8-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr Peter Whitcombe</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="0427570C-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr Any Body</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="0441958E-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr Deborah Turner</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="042756BA-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Ms Wbpcs Dietician</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04381F9B-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Dr Dave Disorderly</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                                <part typeCode="PART">
+                                    <Agent classCode="AGNT">
+                                        <id root="04229BBD-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <code code="704951000000106" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Other person"/>
+                                        <agentPerson classCode="PSN" determinerCode="INSTANCE">
+                                            <name>
+                                                <family>Unknown User</family>
+                                            </name>
+                                        </agentPerson>
+                                    </Agent>
+                                </part>
+                            </agentDirectory>
+                        </responsibleParty>
+                        <component typeCode="COMP">
+                            <ehrComposition classCode="COMPOSITION" moodCode="EVN">
+                                <id root="04C4CF21-ECB7-11EC-8083-AC162D1F16F0"/>
+                                <code code="37351000000107" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Administration Note"/>
+                                <statusCode code="COMPLETE"/>
+                                <effectiveTime>
+                                    <center value="20220615152534"/>
+                                </effectiveTime>
+                                <availabilityTime value="20220615152534"/>
+                                <author contextControlCode="OP" typeCode="AUT">
+                                    <time value="20220615152534"/>
+                                    <agentRef classCode="AGNT">
+                                        <id root="SystmOne"/>
+                                    </agentRef>
+                                </author>
+                                <component typeCode="COMP">
+                                    <NarrativeStatement classCode="OBS" moodCode="EVN">
+                                        <id root="04C4CF20-ECB7-11EC-8083-AC162D1F16F0"/>
+                                        <text>Skeleton statement</text>
+                                        <statusCode code="COMPLETE"/>
+                                        <availabilityTime value="20220615152534"/>
+                                        <reference typeCode="REFR">
+                                            <referredToExternalDocument classCode="DOC" moodCode="EVN">
+                                                <id root="04B40640-ECB7-11EC-8083-AC162D1F16F0"/>
+                                                <code code="24891000000101" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Skeleton statement">
+                                                    <originalText>Original RCMR_IN03 EhrExtract message</originalText>
+                                                </code>
+                                                <text mediaType="text/xml">
+                                                    <reference value="mid:04B40640-ECB7-11EC-8083-AC162D1F16F0_ExtractPayload"/>
+                                                </text>
+                                            </referredToExternalDocument>
+                                        </reference>
+                                    </NarrativeStatement>
+                                </component>
+                            </ehrComposition>
+                        </component>
+                    </ehrFolder>
+                </component>
+                <inFulfillmentOf typeCode="FLFS">
+                    <priorEhrRequest classCode="EXTRACT" moodCode="RQO">
+                        <id root="9E08034A-400C-4761-B37F-8A9D452CB6A7"/>
+                    </priorEhrRequest>
+                </inFulfillmentOf>
+                <limitation inversionInd="true" typeCode="LIMIT">
+                    <limitingEhrExtractSpecification classCode="OBS" moodCode="DEF">
+                        <id root="04C4CF23-ECB7-11EC-8083-AC162D1F16F0"/>
+                        <code code="37241000000102" codeSystem="2.16.840.1.113883.2.1.3.2.4.15" displayName="Entire record available to originator (administrative concept)"/>
+                    </limitingEhrExtractSpecification>
+                </limitation>
+            </EhrExtract>
+        </subject>
+    </ControlActEvent>
+</RCMR_IN030000UK06>
